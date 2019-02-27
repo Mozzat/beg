@@ -87,7 +87,7 @@
 + (NSArray *)removeDuplicateArr1:(NSArray *)modelData WithArr2:(NSMutableArray *)modelData1;
 
 ///获取当前控制器的导航栏控制器
-//+ (BaseNavigationController *)getCurrentNavigationVC;
++ (UINavigationController *)getCurrentNavigationVC;
 
 ///获取邮箱地址
 + (BOOL)isValidateEmail:(NSString *)email;

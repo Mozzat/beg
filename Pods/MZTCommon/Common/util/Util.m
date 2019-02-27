@@ -8,6 +8,7 @@
 
 #import "Util.h"
 #import "AppKey.h"
+//#import "TabBarVC.h"
 
 @implementation Util
 
@@ -349,12 +350,12 @@
     
 }
 
-//+ (BaseNavigationController *)getCurrentNavigationVC{
-//
-//    MainTabBarVC *tabbar = (MainTabBarVC *)[UIApplication sharedApplication].keyWindow.rootViewController;
-//    return tabbar.selectedViewController;
-//
-//}
++ (UINavigationController *)getCurrentNavigationVC{
+
+    UITabBarController *tabbar = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    return tabbar.selectedViewController;
+
+}
 
 //+ (BaseViewController *)getCurrentVC
 //{

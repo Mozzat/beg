@@ -10,6 +10,8 @@ target 'KneelBeg' do
   pod 'Masonry'
   pod "CTMediator"
   pod 'FDFullscreenPopGesture'
+  pod 'IQKeyboardManager'
+  pod 'SDWebImage'
 
   #高度地图sdk
   pod 'AMap2DMap-NO-IDFA'

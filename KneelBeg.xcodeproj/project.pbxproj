@@ -146,6 +146,36 @@
 		769EFFAA221A43A90032BA76 /* CustomCallouView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769EFFA9221A43A90032BA76 /* CustomCallouView.m */; };
 		769EFFAD221A49AA0032BA76 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769EFFAC221A49AA0032BA76 /* CustomAnnotationView.m */; };
 		76A1419E221AABB900BCEDBF /* GrabOrderWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A1419D221AABB900BCEDBF /* GrabOrderWaterFlowLayout.m */; };
+		76BF3B8F22237D7C0079C898 /* AppDelegate+IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B8E22237D7C0079C898 /* AppDelegate+IQKeyboardManager.m */; };
+		76BF3B92222382E90079C898 /* GrabDetialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B91222382E90079C898 /* GrabDetialVC.m */; };
+		76BF3B95222383250079C898 /* FoucuesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B94222383250079C898 /* FoucuesView.m */; };
+		76BF3B9922238B480079C898 /* MZTScrollVIewSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B9822238B480079C898 /* MZTScrollVIewSlider.m */; };
+		76BF3B9C22238C510079C898 /* OrderBasicInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B9B22238C510079C898 /* OrderBasicInformationView.m */; };
+		76BF3BA022238D0A0079C898 /* YUTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B9F22238D0A0079C898 /* YUTimer.m */; };
+		76BF3BA322239D000079C898 /* OrderDetialContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3BA222239D000079C898 /* OrderDetialContentView.m */; };
+		76BF3BA62223BF8C0079C898 /* OrderShareVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3BA52223BF8C0079C898 /* OrderShareVIew.m */; };
+		76BF3BA92223C04B0079C898 /* UIShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3BA82223C04B0079C898 /* UIShareButton.m */; };
+		76BF3BB22223CA240079C898 /* 发单分享@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BAC2223CA240079C898 /* 发单分享@3x.png */; };
+		76BF3BB32223CA240079C898 /* 发单收藏@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BAD2223CA240079C898 /* 发单收藏@3x.png */; };
+		76BF3BB42223CA240079C898 /* 发单分享@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BAE2223CA240079C898 /* 发单分享@2x.png */; };
+		76BF3BB52223CA240079C898 /* 发单收藏@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BAF2223CA240079C898 /* 发单收藏@2x.png */; };
+		76BF3BB82223CC640079C898 /* GrabOrderCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3BB72223CC640079C898 /* GrabOrderCommentView.m */; };
+		76BF3BBC222404C90079C898 /* 评论页面-返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BBA222404C90079C898 /* 评论页面-返回@2x.png */; };
+		76BF3BBD222404C90079C898 /* 评论页面-返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BBB222404C90079C898 /* 评论页面-返回@3x.png */; };
+		76BF3BC22224CCF10079C898 /* 发单消息@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BBE2224CCF00079C898 /* 发单消息@3x.png */; };
+		76BF3BC32224CCF10079C898 /* 发单咨询@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BBF2224CCF00079C898 /* 发单咨询@2x.png */; };
+		76BF3BC42224CCF10079C898 /* 发单咨询@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BC02224CCF00079C898 /* 发单咨询@3x.png */; };
+		76BF3BC52224CCF10079C898 /* 发单消息@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BC12224CCF10079C898 /* 发单消息@2x.png */; };
+		76BF3BC82224CD0F0079C898 /* 发单打电话@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BC62224CD0F0079C898 /* 发单打电话@3x.png */; };
+		76BF3BC92224CD0F0079C898 /* 发单打电话@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BC72224CD0F0079C898 /* 发单打电话@2x.png */; };
+		76BF3BCF2224CFF90079C898 /* UIButton+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3BCC2224CFF90079C898 /* UIButton+Load.m */; };
+		76BF3BD02224CFF90079C898 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3BCE2224CFF90079C898 /* UIButton+ImageTitleSpacing.m */; };
+		76BF3BDE2224EEDF0079C898 /* UIImageView+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3BDA2224EEDF0079C898 /* UIImageView+Load.m */; };
+		76BF3BDF2224EEDF0079C898 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3BDC2224EEDF0079C898 /* UIImageView+LBBlurredImage.m */; };
+		76BF3BE222250FE80079C898 /* 发单喜欢@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BE022250FE80079C898 /* 发单喜欢@3x.png */; };
+		76BF3BE322250FE80079C898 /* 发单喜欢@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BE122250FE80079C898 /* 发单喜欢@2x.png */; };
+		76BF3BE6222538170079C898 /* 发单更多@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BE4222538170079C898 /* 发单更多@3x.png */; };
+		76BF3BE7222538170079C898 /* 发单更多@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BE5222538170079C898 /* 发单更多@2x.png */; };
 		84A623BE34DB90FCB14D021A /* libPods-KneelBeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 920FFC1D397FCFD35263F516 /* libPods-KneelBeg.a */; };
 /* End PBXBuildFile section */
 
@@ -367,6 +397,50 @@
 		769EFFAC221A49AA0032BA76 /* CustomAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
 		76A1419C221AABB900BCEDBF /* GrabOrderWaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrabOrderWaterFlowLayout.h; sourceTree = "<group>"; };
 		76A1419D221AABB900BCEDBF /* GrabOrderWaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrabOrderWaterFlowLayout.m; sourceTree = "<group>"; };
+		76BF3B8D22237D7C0079C898 /* AppDelegate+IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+IQKeyboardManager.h"; sourceTree = "<group>"; };
+		76BF3B8E22237D7C0079C898 /* AppDelegate+IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+IQKeyboardManager.m"; sourceTree = "<group>"; };
+		76BF3B90222382E90079C898 /* GrabDetialVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrabDetialVC.h; sourceTree = "<group>"; };
+		76BF3B91222382E90079C898 /* GrabDetialVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrabDetialVC.m; sourceTree = "<group>"; };
+		76BF3B93222383250079C898 /* FoucuesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoucuesView.h; sourceTree = "<group>"; };
+		76BF3B94222383250079C898 /* FoucuesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoucuesView.m; sourceTree = "<group>"; };
+		76BF3B9722238B480079C898 /* MZTScrollVIewSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTScrollVIewSlider.h; sourceTree = "<group>"; };
+		76BF3B9822238B480079C898 /* MZTScrollVIewSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTScrollVIewSlider.m; sourceTree = "<group>"; };
+		76BF3B9A22238C510079C898 /* OrderBasicInformationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderBasicInformationView.h; sourceTree = "<group>"; };
+		76BF3B9B22238C510079C898 /* OrderBasicInformationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderBasicInformationView.m; sourceTree = "<group>"; };
+		76BF3B9E22238D0A0079C898 /* YUTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTimer.h; sourceTree = "<group>"; };
+		76BF3B9F22238D0A0079C898 /* YUTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTimer.m; sourceTree = "<group>"; };
+		76BF3BA122239D000079C898 /* OrderDetialContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderDetialContentView.h; sourceTree = "<group>"; };
+		76BF3BA222239D000079C898 /* OrderDetialContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderDetialContentView.m; sourceTree = "<group>"; };
+		76BF3BA42223BF8C0079C898 /* OrderShareVIew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderShareVIew.h; sourceTree = "<group>"; };
+		76BF3BA52223BF8C0079C898 /* OrderShareVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderShareVIew.m; sourceTree = "<group>"; };
+		76BF3BA72223C04B0079C898 /* UIShareButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShareButton.h; sourceTree = "<group>"; };
+		76BF3BA82223C04B0079C898 /* UIShareButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIShareButton.m; sourceTree = "<group>"; };
+		76BF3BAC2223CA240079C898 /* 发单分享@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单分享@3x.png"; sourceTree = "<group>"; };
+		76BF3BAD2223CA240079C898 /* 发单收藏@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单收藏@3x.png"; sourceTree = "<group>"; };
+		76BF3BAE2223CA240079C898 /* 发单分享@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单分享@2x.png"; sourceTree = "<group>"; };
+		76BF3BAF2223CA240079C898 /* 发单收藏@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单收藏@2x.png"; sourceTree = "<group>"; };
+		76BF3BB62223CC640079C898 /* GrabOrderCommentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrabOrderCommentView.h; sourceTree = "<group>"; };
+		76BF3BB72223CC640079C898 /* GrabOrderCommentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrabOrderCommentView.m; sourceTree = "<group>"; };
+		76BF3BBA222404C90079C898 /* 评论页面-返回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "评论页面-返回@2x.png"; sourceTree = "<group>"; };
+		76BF3BBB222404C90079C898 /* 评论页面-返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "评论页面-返回@3x.png"; sourceTree = "<group>"; };
+		76BF3BBE2224CCF00079C898 /* 发单消息@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单消息@3x.png"; sourceTree = "<group>"; };
+		76BF3BBF2224CCF00079C898 /* 发单咨询@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单咨询@2x.png"; sourceTree = "<group>"; };
+		76BF3BC02224CCF00079C898 /* 发单咨询@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单咨询@3x.png"; sourceTree = "<group>"; };
+		76BF3BC12224CCF10079C898 /* 发单消息@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单消息@2x.png"; sourceTree = "<group>"; };
+		76BF3BC62224CD0F0079C898 /* 发单打电话@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单打电话@3x.png"; sourceTree = "<group>"; };
+		76BF3BC72224CD0F0079C898 /* 发单打电话@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单打电话@2x.png"; sourceTree = "<group>"; };
+		76BF3BCB2224CFF90079C898 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		76BF3BCC2224CFF90079C898 /* UIButton+Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Load.m"; sourceTree = "<group>"; };
+		76BF3BCD2224CFF90079C898 /* UIButton+Load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Load.h"; sourceTree = "<group>"; };
+		76BF3BCE2224CFF90079C898 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		76BF3BDA2224EEDF0079C898 /* UIImageView+Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Load.m"; sourceTree = "<group>"; };
+		76BF3BDB2224EEDF0079C898 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
+		76BF3BDC2224EEDF0079C898 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
+		76BF3BDD2224EEDF0079C898 /* UIImageView+Load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Load.h"; sourceTree = "<group>"; };
+		76BF3BE022250FE80079C898 /* 发单喜欢@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单喜欢@3x.png"; sourceTree = "<group>"; };
+		76BF3BE122250FE80079C898 /* 发单喜欢@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单喜欢@2x.png"; sourceTree = "<group>"; };
+		76BF3BE4222538170079C898 /* 发单更多@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单更多@3x.png"; sourceTree = "<group>"; };
+		76BF3BE5222538170079C898 /* 发单更多@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单更多@2x.png"; sourceTree = "<group>"; };
 		8DD32D5295A72094791F9B48 /* Pods-KneelBegUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KneelBegUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KneelBegUITests/Pods-KneelBegUITests.release.xcconfig"; sourceTree = "<group>"; };
 		920FFC1D397FCFD35263F516 /* libPods-KneelBeg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KneelBeg.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E0648CC0AD5BF30D1C48BD /* libPods-KneelBegUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KneelBegUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -436,6 +510,18 @@
 			children = (
 				7615597C221A91CF00DFB406 /* GrabWaterView.h */,
 				7615597D221A91CF00DFB406 /* GrabWaterView.m */,
+				76BF3B93222383250079C898 /* FoucuesView.h */,
+				76BF3B94222383250079C898 /* FoucuesView.m */,
+				76BF3B9A22238C510079C898 /* OrderBasicInformationView.h */,
+				76BF3B9B22238C510079C898 /* OrderBasicInformationView.m */,
+				76BF3BA122239D000079C898 /* OrderDetialContentView.h */,
+				76BF3BA222239D000079C898 /* OrderDetialContentView.m */,
+				76BF3BA42223BF8C0079C898 /* OrderShareVIew.h */,
+				76BF3BA52223BF8C0079C898 /* OrderShareVIew.m */,
+				76BF3BA72223C04B0079C898 /* UIShareButton.h */,
+				76BF3BA82223C04B0079C898 /* UIShareButton.m */,
+				76BF3BB62223CC640079C898 /* GrabOrderCommentView.h */,
+				76BF3BB72223CC640079C898 /* GrabOrderCommentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,6 +610,8 @@
 		76455554221D729100F71DAA /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				76BF3BD92224EEDF0079C898 /* UIImageView */,
+				76BF3BCA2224CFF90079C898 /* UIButton */,
 				76455555221D72A800F71DAA /* UITextView */,
 			);
 			path = Category;
@@ -727,6 +815,8 @@
 				7695C83C2216645000ADD365 /* GrabOrderVC.m */,
 				76155953221A52F900DFB406 /* GrabOrderWaterFallVC.h */,
 				76155954221A52F900DFB406 /* GrabOrderWaterFallVC.m */,
+				76BF3B90222382E90079C898 /* GrabDetialVC.h */,
+				76BF3B91222382E90079C898 /* GrabDetialVC.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -834,6 +924,7 @@
 		7695C82C221653F300ADD365 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				76BF3BB9222404B00079C898 /* image */,
 				7695C84B2216682E00ADD365 /* BaseNavigationController.h */,
 				7695C84C2216682E00ADD365 /* BaseNavigationController.m */,
 				7695C82D2216540A00ADD365 /* BaseViewController.h */,
@@ -976,6 +1067,20 @@
 				76393FC2221BFC5F00F9E174 /* 抢单@3x.png */,
 				76393FC4221BFC5F00F9E174 /* 抢单-选中@2x.png */,
 				76393FC5221BFC5F00F9E174 /* 抢单-选中@3x.png */,
+				76BF3BAE2223CA240079C898 /* 发单分享@2x.png */,
+				76BF3BAC2223CA240079C898 /* 发单分享@3x.png */,
+				76BF3BAF2223CA240079C898 /* 发单收藏@2x.png */,
+				76BF3BAD2223CA240079C898 /* 发单收藏@3x.png */,
+				76BF3BC12224CCF10079C898 /* 发单消息@2x.png */,
+				76BF3BBE2224CCF00079C898 /* 发单消息@3x.png */,
+				76BF3BBF2224CCF00079C898 /* 发单咨询@2x.png */,
+				76BF3BC02224CCF00079C898 /* 发单咨询@3x.png */,
+				76BF3BC72224CD0F0079C898 /* 发单打电话@2x.png */,
+				76BF3BC62224CD0F0079C898 /* 发单打电话@3x.png */,
+				76BF3BE122250FE80079C898 /* 发单喜欢@2x.png */,
+				76BF3BE022250FE80079C898 /* 发单喜欢@3x.png */,
+				76BF3BE5222538170079C898 /* 发单更多@2x.png */,
+				76BF3BE4222538170079C898 /* 发单更多@3x.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -1022,6 +1127,8 @@
 		7695C84E2216880F00ADD365 /* Plug */ = {
 			isa = PBXGroup;
 			children = (
+				76BF3B9D22238D0A0079C898 /* YUTimer */,
+				76BF3B9622238B120079C898 /* MZTScrollVIewSlider */,
 				76455590221ECADE00F71DAA /* fat-lame */,
 				76455570221E79B400F71DAA /* Voice */,
 				7645551A221CE48B00F71DAA /* Album */,
@@ -1032,6 +1139,7 @@
 		7695C84F22168BDF00ADD365 /* AppDelgateCategory */ = {
 			isa = PBXGroup;
 			children = (
+				76BF3B8C22237D7C0079C898 /* Keyboard */,
 				7695C85022168C2800ADD365 /* AppDelegate+AMapService.h */,
 				7695C85122168C2800ADD365 /* AppDelegate+AMapService.m */,
 			);
@@ -1047,6 +1155,64 @@
 				769EFFAC221A49AA0032BA76 /* CustomAnnotationView.m */,
 			);
 			path = "自定义高德地图气泡";
+			sourceTree = "<group>";
+		};
+		76BF3B8C22237D7C0079C898 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				76BF3B8D22237D7C0079C898 /* AppDelegate+IQKeyboardManager.h */,
+				76BF3B8E22237D7C0079C898 /* AppDelegate+IQKeyboardManager.m */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		76BF3B9622238B120079C898 /* MZTScrollVIewSlider */ = {
+			isa = PBXGroup;
+			children = (
+				76BF3B9722238B480079C898 /* MZTScrollVIewSlider.h */,
+				76BF3B9822238B480079C898 /* MZTScrollVIewSlider.m */,
+			);
+			path = MZTScrollVIewSlider;
+			sourceTree = "<group>";
+		};
+		76BF3B9D22238D0A0079C898 /* YUTimer */ = {
+			isa = PBXGroup;
+			children = (
+				76BF3B9E22238D0A0079C898 /* YUTimer.h */,
+				76BF3B9F22238D0A0079C898 /* YUTimer.m */,
+			);
+			path = YUTimer;
+			sourceTree = "<group>";
+		};
+		76BF3BB9222404B00079C898 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				76BF3BBA222404C90079C898 /* 评论页面-返回@2x.png */,
+				76BF3BBB222404C90079C898 /* 评论页面-返回@3x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		76BF3BCA2224CFF90079C898 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				76BF3BCC2224CFF90079C898 /* UIButton+Load.m */,
+				76BF3BCD2224CFF90079C898 /* UIButton+Load.h */,
+				76BF3BCB2224CFF90079C898 /* UIButton+ImageTitleSpacing.h */,
+				76BF3BCE2224CFF90079C898 /* UIButton+ImageTitleSpacing.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		76BF3BD92224EEDF0079C898 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				76BF3BDA2224EEDF0079C898 /* UIImageView+Load.m */,
+				76BF3BDD2224EEDF0079C898 /* UIImageView+Load.h */,
+				76BF3BDB2224EEDF0079C898 /* UIImageView+LBBlurredImage.h */,
+				76BF3BDC2224EEDF0079C898 /* UIImageView+LBBlurredImage.m */,
+			);
+			path = UIImageView;
 			sourceTree = "<group>";
 		};
 		A5BE6CFD87C27C561AA1809D /* Pods */ = {
@@ -1170,8 +1336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76393FAD221BF89200F9E174 /* 红包发布@3x.png in Resources */,
+				76BF3BB22223CA240079C898 /* 发单分享@3x.png in Resources */,
 				76455552221D457C00F71DAA /* 向右的箭头@3x.png in Resources */,
+				76BF3BE6222538170079C898 /* 发单更多@3x.png in Resources */,
 				767E8D7F221F9AF0004611F5 /* 麦克风语音3@2x.png in Resources */,
+				76BF3BE322250FE80079C898 /* 发单喜欢@2x.png in Resources */,
 				7695C8752216A09000ADD365 /* 重新定位@3x.png in Resources */,
 				767E8D7E221F9AF0004611F5 /* 麦克风语音2@2x.png in Resources */,
 				76393FB6221BF8C000F9E174 /* 发单关闭@2x.png in Resources */,
@@ -1180,6 +1349,8 @@
 				767E8D7C221F9AF0004611F5 /* 麦克风语音1@2x.png in Resources */,
 				76393FAA221BF88800F9E174 /* 图文发布@3x.png in Resources */,
 				76393FC8221BFC5F00F9E174 /* 抢单-选中@2x.png in Resources */,
+				76BF3BC32224CCF10079C898 /* 发单咨询@2x.png in Resources */,
+				76BF3BBD222404C90079C898 /* 评论页面-返回@3x.png in Resources */,
 				76393FA9221BF88800F9E174 /* 图文发布@2x.png in Resources */,
 				7695C87222169EE900ADD365 /* 消息@2x.png in Resources */,
 				767E8D94221FDFA0004611F5 /* 说话时间太短@3x.png in Resources */,
@@ -1189,32 +1360,41 @@
 				7645558F221EA01300F71DAA /* 组件删除@3x.png in Resources */,
 				7615597A221A8E4300DFB406 /* 坐标模式@2x.png in Resources */,
 				7695C7642214FE0600ADD365 /* LaunchScreen.storyboard in Resources */,
+				76BF3BC52224CCF10079C898 /* 发单消息@2x.png in Resources */,
 				76393FC1221BFC0D00F9E174 /* 发单-选中@3x.png in Resources */,
 				7695C85A221699EC00ADD365 /* 筛选@3x.png in Resources */,
 				76393FAE221BF89200F9E174 /* 红包发布@2x.png in Resources */,
 				76393FC7221BFC5F00F9E174 /* 抢单@2x.png in Resources */,
+				76BF3BB52223CA240079C898 /* 发单收藏@2x.png in Resources */,
 				7695C86B22169EE800ADD365 /* 红包退出图标@3x.png in Resources */,
+				76BF3BC42224CCF10079C898 /* 发单咨询@3x.png in Resources */,
 				76393FB2221BF8A200F9E174 /* 语音发布@3x.png in Resources */,
 				7695C86D22169EE800ADD365 /* 帮助中心@2x.png in Resources */,
 				7695C859221699EC00ADD365 /* 列表@3x.png in Resources */,
 				76393FD1221C014C00F9E174 /* 确定位置按钮@2x.png in Resources */,
 				767E8D81221F9AF0004611F5 /* 麦克风语音5@2x.png in Resources */,
 				7695C85B221699EC00ADD365 /* 列表@2x.png in Resources */,
+				76BF3BBC222404C90079C898 /* 评论页面-返回@2x.png in Resources */,
 				764EA8442216B21900113557 /* 红包图标@2x.png in Resources */,
 				7645556F221E53B800F71DAA /* 发单更多@2x.png in Resources */,
 				76455562221D81AF00F71DAA /* 添加图片视频@3x.png in Resources */,
 				76393FBE221BFC0D00F9E174 /* 发单@3x.png in Resources */,
+				76BF3BC22224CCF10079C898 /* 发单消息@3x.png in Resources */,
 				76393FC0221BFC0D00F9E174 /* 发单-选中@2x.png in Resources */,
 				7645553F221CE96100F71DAA /* selectImage_select@2x.png in Resources */,
 				7695C86222169C3D00ADD365 /* 关闭@3x.png in Resources */,
 				764EA8472216B21900113557 /* 红包图标@3x.png in Resources */,
+				76BF3BB42223CA240079C898 /* 发单分享@2x.png in Resources */,
 				767E8D8A221F9B09004611F5 /* 上滑-取消发布@3x.png in Resources */,
 				767E8D89221F9B09004611F5 /* 上滑-取消发布@2x.png in Resources */,
 				76393FD0221C014C00F9E174 /* 确定位置按钮@3x.png in Resources */,
+				76BF3BB32223CA240079C898 /* 发单收藏@3x.png in Resources */,
+				76BF3BC92224CD0F0079C898 /* 发单打电话@2x.png in Resources */,
 				7695C85C221699EC00ADD365 /* 搜索@3x.png in Resources */,
 				7695C86F22169EE900ADD365 /* 信用图标@2x.png in Resources */,
 				767E8D82221F9AF0004611F5 /* 麦克风语音5@3x.png in Resources */,
 				7620FAF02216A7AE008A7488 /* 气球坐标@2x.png in Resources */,
+				76BF3BE222250FE80079C898 /* 发单喜欢@3x.png in Resources */,
 				7645558E221EA01300F71DAA /* 组件删除@2x.png in Resources */,
 				7695C86122169C3D00ADD365 /* 关闭@2x.png in Resources */,
 				767E8D84221F9AF0004611F5 /* 麦克风语音3@3x.png in Resources */,
@@ -1243,6 +1423,7 @@
 				767E8D86221F9AF0004611F5 /* 麦克风语音4@2x.png in Resources */,
 				76393FB5221BF8C000F9E174 /* 发单关闭@3x.png in Resources */,
 				7695C86E22169EE800ADD365 /* 消息@3x.png in Resources */,
+				76BF3BE7222538170079C898 /* 发单更多@2x.png in Resources */,
 				767E8D80221F9AF0004611F5 /* 麦克风语音4@3x.png in Resources */,
 				76455584221E9A2B00F71DAA /* 语音2@2x.png in Resources */,
 				7695C87122169EE900ADD365 /* 帮助中心@3x.png in Resources */,
@@ -1250,6 +1431,7 @@
 				76455588221E9A2B00F71DAA /* 语音3@3x.png in Resources */,
 				76393FB1221BF8A200F9E174 /* 语音发布@2x.png in Resources */,
 				7620FAEF2216A7AE008A7488 /* 气球坐标@3x.png in Resources */,
+				76BF3BC82224CD0F0079C898 /* 发单打电话@3x.png in Resources */,
 				76393FCD221C009F00F9E174 /* 发单背景@3x.png in Resources */,
 				767E8D7D221F9AF0004611F5 /* 麦克风语音6@3x.png in Resources */,
 				764EA8452216B21900113557 /* 跪求标题@3x.png in Resources */,
@@ -1349,6 +1531,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KneelBeg/Pods-KneelBeg-resources.sh",
 				"${PODS_ROOT}/AMap2DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/ProgressHUD/ProgressHUD/ProgressHUD/ProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1356,6 +1539,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1371,11 +1555,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7695C83D2216645000ADD365 /* GrabOrderVC.m in Sources */,
+				76BF3BA322239D000079C898 /* OrderDetialContentView.m in Sources */,
 				76455558221D72A800F71DAA /* UITextView+Placeholder.m in Sources */,
 				76155977221A8B3F00DFB406 /* CTMediator+GrabOrderWaterMediator.m in Sources */,
 				7645553A221CE48B00F71DAA /* LYFPhotosManager.m in Sources */,
 				7645555E221D7B7500F71DAA /* ImageVideoCell.m in Sources */,
 				769EFFAA221A43A90032BA76 /* CustomCallouView.m in Sources */,
+				76BF3BB82223CC640079C898 /* GrabOrderCommentView.m in Sources */,
 				7615596A221A816E00DFB406 /* BaseCollectionView.m in Sources */,
 				76393FB9221BF8FD00F9E174 /* SendOrderBtn.m in Sources */,
 				76155967221A815B00DFB406 /* BaseTableView.m in Sources */,
@@ -1384,20 +1570,26 @@
 				7695C8352216544E00ADD365 /* GuidancePageVC.m in Sources */,
 				76455576221E7DEF00F71DAA /* RecorderVC.m in Sources */,
 				7695C84D2216682E00ADD365 /* BaseNavigationController.m in Sources */,
+				76BF3B9922238B480079C898 /* MZTScrollVIewSlider.m in Sources */,
 				76455536221CE48B00F71DAA /* LYFAlbumCollectionViewCell.m in Sources */,
 				76455532221CE48B00F71DAA /* LYFAlbumViewController.m in Sources */,
 				767E8D6C221F943D004611F5 /* AudioShowTostView.m in Sources */,
+				76BF3B8F22237D7C0079C898 /* AppDelegate+IQKeyboardManager.m in Sources */,
+				76BF3BDE2224EEDF0079C898 /* UIImageView+Load.m in Sources */,
 				7695C85222168C2800ADD365 /* AppDelegate+AMapService.m in Sources */,
 				76455538221CE48B00F71DAA /* LYFAlbumTableView.m in Sources */,
 				7615597E221A91CF00DFB406 /* GrabWaterView.m in Sources */,
 				76455539221CE48B00F71DAA /* LYFAlbumView.m in Sources */,
 				7695C8322216543900ADD365 /* LaunchPageVC.m in Sources */,
+				76BF3B9C22238C510079C898 /* OrderBasicInformationView.m in Sources */,
 				76155955221A52F900DFB406 /* GrabOrderWaterFallVC.m in Sources */,
+				76BF3BA62223BF8C0079C898 /* OrderShareVIew.m in Sources */,
 				76155964221A5CA500DFB406 /* GrabOrderWaterCell.m in Sources */,
 				76455579221E86BE00F71DAA /* PublishVoiceVC.m in Sources */,
 				76455537221CE48B00F71DAA /* LYFAlbumTableViewCell.m in Sources */,
 				76155974221A8AB100DFB406 /* Target_GrabOrderWater.m in Sources */,
 				769EFFAD221A49AA0032BA76 /* CustomAnnotationView.m in Sources */,
+				76BF3B92222382E90079C898 /* GrabDetialVC.m in Sources */,
 				7645554C221D3A2D00F71DAA /* PublistWordsOrderVC.m in Sources */,
 				76455546221CEC1600F71DAA /* AlbumBottomView.m in Sources */,
 				7695C83A22165F3F00ADD365 /* TabBarVC.m in Sources */,
@@ -1406,8 +1598,10 @@
 				76A1419E221AABB900BCEDBF /* GrabOrderWaterFlowLayout.m in Sources */,
 				76393FA3221BF56900F9E174 /* SendBottomView.m in Sources */,
 				7645555B221D79E300F71DAA /* PublishShowImageOrVideoView.m in Sources */,
+				76BF3BCF2224CFF90079C898 /* UIButton+Load.m in Sources */,
 				7615595E221A5C7A00DFB406 /* BaseTableViewCell.m in Sources */,
 				76155961221A5C8B00DFB406 /* BaseCollectionViewCell.m in Sources */,
+				76BF3BD02224CFF90079C898 /* UIButton+ImageTitleSpacing.m in Sources */,
 				76455568221E374300F71DAA /* RedPackageCell1.m in Sources */,
 				7645557C221E8D7200F71DAA /* PublishVoiceView.m in Sources */,
 				76455535221CE48B00F71DAA /* LYFAlbumModel.m in Sources */,
@@ -1417,9 +1611,13 @@
 				76455573221E7B3800F71DAA /* VoiceAuthorManager.m in Sources */,
 				7695C7592214FE0400ADD365 /* AppDelegate.m in Sources */,
 				7645554F221D41CD00F71DAA /* PublishOrderLineView.m in Sources */,
+				76BF3BA92223C04B0079C898 /* UIShareButton.m in Sources */,
+				76BF3BA022238D0A0079C898 /* YUTimer.m in Sources */,
 				76455549221CECC100F71DAA /* AlbumBottomCell.m in Sources */,
 				76393FA0221BEB3F00F9E174 /* SendOrderVC.m in Sources */,
 				7645556B221E375900F71DAA /* RedPageageCell2.m in Sources */,
+				76BF3B95222383250079C898 /* FoucuesView.m in Sources */,
+				76BF3BDF2224EEDF0079C898 /* UIImageView+LBBlurredImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

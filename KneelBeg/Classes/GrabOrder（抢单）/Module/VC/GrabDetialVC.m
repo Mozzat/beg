@@ -1,0 +1,222 @@
+//
+//  GrabDetialVC.m
+//  KneelBeg
+//
+//  Created by 上海荣豫资产 on 2019/2/25.
+//  Copyright © 2019 上海荣豫资产. All rights reserved.
+//
+
+#import "GrabDetialVC.h"
+#import "FoucuesView.h"
+#import "MZTScrollVIewSlider.h"
+#import "OrderShareVIew.h"
+#import "OrderBasicInformationView.h"
+#import "OrderDetialContentView.h"
+#import "OrderShareVIew.h"
+#import "GrabOrderCommentView.h"
+#import "UIButton+ImageTitleSpacing.h"
+
+@interface GrabDetialVC ()
+
+@property (nonatomic, strong) FoucuesView               *focuesView;
+@property (nonatomic, strong) MZTScrollVIewSlider       *sliderScrollView;
+@property (nonatomic, strong) OrderBasicInformationView *basicInformtionView;
+@property (nonatomic, strong) OrderDetialContentView    *contentView;
+@property (nonatomic, strong) OrderShareVIew            *shareView;
+@property (nonatomic, strong) GrabOrderCommentView      *commentView;
+@property (nonatomic, strong) UIView                    *bottomView;
+
+@end
+
+@implementation GrabDetialVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    [self setLocationUI];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    self.sliderScrollView.data = @[@"http://p1.img.cctvpic.com/cportal/img/2019/2/25/1551109029441_938_792x670.jpg",@"http://t11.baidu.com/it/u=538889017,157038003&fm=173&app=49&f=JPEG?w=640&h=725&s=A50042F9648B7AFCCC11C11F030090C2"];
+    
+}
+
+- (void)setLocationUI{
+    
+    self.navigationItem.title = @"抢单详情";
+    
+    UIButton *rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [rightBtn setImage:[UIImage imageNamed:@"发单更多"] forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    
+    
+    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, BDTopHeight, SCREEN_WIDTH, SCREENH_HEIGHT - BDTopHeight - BDBottomHeight - 50)];
+    scrollView.backgroundColor = whiteColor();
+    [self.view addSubview:scrollView];
+    
+    UIView *contentView = [[UIView alloc]init];
+    [scrollView addSubview:contentView];
+    
+    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.left.bottom.equalTo(scrollView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+        
+    }];
+    
+    [contentView addSubview:self.focuesView];
+    [self.focuesView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.top.equalTo(contentView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+        make.height.mas_equalTo(80);
+        
+    }];
+    
+    [contentView addSubview:self.sliderScrollView];
+    [self.sliderScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.focuesView.mas_bottom);
+        make.left.equalTo(contentView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+//        make.height.mas_equalTo(300);
+
+    }];
+
+    [contentView addSubview:self.basicInformtionView];
+    [self.basicInformtionView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.sliderScrollView.mas_bottom).offset(10);
+        make.left.equalTo(contentView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+        make.height.mas_equalTo(70);
+
+    }];
+
+    [contentView addSubview:self.contentView];
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.basicInformtionView.mas_bottom).offset(10);
+        make.left.equalTo(contentView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+
+    }];
+
+    [contentView addSubview:self.shareView];
+    [self.shareView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.contentView.mas_bottom);
+        make.left.equalTo(contentView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+        make.height.mas_equalTo(60);
+
+    }];
+
+    [contentView addSubview:self.commentView];
+    [self.commentView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.shareView.mas_bottom);
+        make.left.left.equalTo(contentView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+        make.bottom.equalTo(contentView);
+
+    }];
+    
+    [self.view addSubview:self.bottomView];
+    
+    
+}
+
+#pragma mark---懒加载
+- (FoucuesView *)focuesView{
+    
+    if (!_focuesView) {
+        _focuesView = [[FoucuesView alloc]init];
+    }
+    return _focuesView;
+}
+
+- (MZTScrollVIewSlider *)sliderScrollView{
+    
+    if (!_sliderScrollView) {
+        _sliderScrollView = [[MZTScrollVIewSlider alloc]init];
+        
+    }
+    return _sliderScrollView;
+}
+
+- (OrderBasicInformationView *)basicInformtionView{
+    
+    if (!_basicInformtionView) {
+        _basicInformtionView = [[OrderBasicInformationView alloc]init];
+        
+    }
+    return _basicInformtionView;
+}
+
+- (OrderDetialContentView *)contentView{
+    
+    if (!_contentView) {
+        _contentView = [[OrderDetialContentView alloc]init];
+    }
+    return _contentView;
+}
+
+- (GrabOrderCommentView *)commentView{
+    
+    if (!_commentView) {
+        _commentView = [[GrabOrderCommentView alloc]init];
+    }
+    
+    return _commentView;
+}
+
+-(OrderShareVIew *)shareView{
+    
+    if (!_shareView) {
+        _shareView = [[OrderShareVIew alloc]init];
+        
+    }
+    return _shareView;
+}
+
+- (UIView *)bottomView{
+    
+    if (!_bottomView) {
+        _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREENH_HEIGHT  - BDBottomHeight - 50, SCREEN_WIDTH, 50)];
+        _bottomView.backgroundColor = whiteColor();
+        [_bottomView shadow:HexColor(@"f5f5f5") opacity:1 radius:2 offset:CGSizeMake(0, -1)];
+        
+        UIButton *consultBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH/3.0, self.bottomView.height)];
+        [consultBtn setImage:[UIImage imageNamed:@"发单咨询"] forState:UIControlStateNormal];
+        [consultBtn setTitle:@"咨询" forState:UIControlStateNormal];
+        [consultBtn setTitleColor:blackColor() forState:UIControlStateNormal];
+        consultBtn.titleLabel.font = Font16();
+        [consultBtn layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleLeft imageTitleSpace:5];
+        [_bottomView addSubview:consultBtn];
+        
+        UIButton *callBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/3.0, 0, SCREEN_WIDTH/3.0, _bottomView.height)];
+        callBtn.backgroundColor = HexColor(@"FDEAED");
+        [callBtn setImage:[UIImage imageNamed:@"发单打电话"] forState:UIControlStateNormal];
+        [callBtn setTitle:@"打电话" forState:UIControlStateNormal];
+        [callBtn setTitleColor:redColor() forState:UIControlStateNormal];
+        callBtn.titleLabel.font = Font16();
+        [callBtn layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleLeft imageTitleSpace:5];
+        [_bottomView addSubview:callBtn];
+        
+        UIButton *grabBtn = [[UIButton alloc]initWithFrame:CGRectMake(2 * SCREEN_WIDTH/3.0, 0, SCREEN_WIDTH/3.0, _bottomView.height)];
+        [grabBtn setTitle:@"立即抢单" forState:UIControlStateNormal];
+        [grabBtn setTitleColor:whiteColor() forState:UIControlStateNormal];
+        grabBtn.backgroundColor = redColor();
+        grabBtn.titleLabel.font = Font16();
+        [_bottomView addSubview:grabBtn];
+        
+    }
+    return _bottomView;
+}
+
+@end

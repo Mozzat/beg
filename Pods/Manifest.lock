@@ -23,12 +23,16 @@ PODS:
     - AMapFoundation-NO-IDFA (~> 1.4)
   - CTMediator (25)
   - FDFullscreenPopGesture (1.1)
+  - IQKeyboardManager (6.2.0)
   - Masonry (1.1.0)
   - MZTCommon (1.0.5)
   - MZTNetWorking (1.0.5):
     - AFNetworking
     - ProgressHUD
   - ProgressHUD (2.60)
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
 
 DEPENDENCIES:
   - AMap2DMap-NO-IDFA
@@ -36,9 +40,11 @@ DEPENDENCIES:
   - AMapSearch-NO-IDFA
   - CTMediator
   - FDFullscreenPopGesture
+  - IQKeyboardManager
   - Masonry
   - MZTCommon
   - MZTNetWorking (= 1.0.5)
+  - SDWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,10 +55,12 @@ SPEC REPOS:
     - AMapSearch-NO-IDFA
     - CTMediator
     - FDFullscreenPopGesture
+    - IQKeyboardManager
     - Masonry
     - MZTCommon
     - MZTNetWorking
     - ProgressHUD
+    - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -62,11 +70,13 @@ SPEC CHECKSUMS:
   AMapSearch-NO-IDFA: 07651afae010f7acda12beb1f2c0f45d29069e75
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MZTCommon: 63eb5e83144240c15a97eadb2a89b76da957c3a2
   MZTNetWorking: fd305cd42e25f0cab5f34f75b4faa1c9604965d3
   ProgressHUD: 4e4efbaf4f5de8bd32e0c4c3b6644a90ea1a8c3e
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
 
-PODFILE CHECKSUM: dcc834b8bf7e6ab6982a0ae90349875be20b86d5
+PODFILE CHECKSUM: a26be8bd7229d5b3e58dbbeffe9381e760898a91
 
 COCOAPODS: 1.6.0

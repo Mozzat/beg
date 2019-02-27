@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LaunchPageVC.h"
 #import "AppDelegate+AMapService.h"
+#import "AppDelegate+IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
@@ -34,6 +35,9 @@
     
     ///高德地图服务注册
     [self registAMapServiceAction];
+    
+    ///键盘管理
+    [self registIQKeyboard];
     
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "inlineDefine.h"
 
 @interface UpLoadFileModel : NSObject
 
