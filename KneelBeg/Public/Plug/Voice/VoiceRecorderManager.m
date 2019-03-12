@@ -16,7 +16,6 @@
 @property (nonatomic, strong) AVAudioRecorder *recorder;
 @property (nonatomic, strong) AVAudioPlayer   *player;
 @property (nonatomic, copy)   NSString        *file;
-@property (nonatomic, copy)   NSString        *filePath;
 
 @end
 

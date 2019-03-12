@@ -123,6 +123,8 @@
         _textF.font = Font15();
         _textF.textAlignment = NSTextAlignmentRight;
         _textF.tintColor = blackColor();
+        _textF.keyboardType = UIKeyboardTypeNumberPad;
+        [_textF addTarget:self action:@selector(textFieldChangeTextF:) forControlEvents:UIControlEventEditingChanged];
         
     }
     return _textF;
@@ -131,6 +133,14 @@
 - (void)setTitles:(NSString *)title{
     
     self.titleLab.text = title;
+    
+}
+
+- (void)textFieldChangeTextF:(UITextField *)textF{
+    
+    if (self.block) {
+        self.block(textF.text);
+    }
     
 }
 

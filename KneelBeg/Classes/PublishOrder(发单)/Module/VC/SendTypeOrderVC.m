@@ -99,6 +99,7 @@
 
         NSLog(@"%@",albumArray);
         PublistWordsOrderVC *word = [[PublistWordsOrderVC alloc]init];
+        word.imageArr = albumArray;
         [self.navigationController pushViewController:word animated:YES];
 
     }];

@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LYFPhotoModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ImageVideoCell : UICollectionViewCell
 
 - (void)setLocationImage:(NSString *)image;
+
+@property (nonatomic, strong) LYFPhotoModel *imageModel;
 
 @end
 

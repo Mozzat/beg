@@ -7,6 +7,7 @@
 //
 
 #import "ImageVideoCell.h"
+#import <Photos/Photos.h>
 
 @interface ImageVideoCell ()
 
@@ -48,6 +49,28 @@
 - (void)setLocationImage:(NSString *)image{
     
     self.bgImageView.image = [UIImage imageNamed:image];
+    
+}
+
+- (void)setImageModel:(LYFPhotoModel *)imageModel{
+    
+    _imageModel = imageModel;
+    
+    PHImageRequestOptions *opt = [[PHImageRequestOptions alloc]init];
+    opt.networkAccessAllowed = YES;
+    opt.resizeMode = PHImageRequestOptionsResizeModeExact;
+    CGSize targetSize = CGSizeMake(70, 70);
+    
+    LRWeakSelf(self);
+    [[PHImageManager defaultManager] requestImageForAsset:imageModel.asset targetSize:targetSize contentMode:PHImageContentModeDefault options:opt resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        
+        LRStrongSelf(self);
+        self.bgImageView.image = result;
+        
+        
+    }];
+
+
     
 }
 

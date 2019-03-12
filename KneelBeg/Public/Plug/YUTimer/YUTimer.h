@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger,YUTimerStatus) {
  @param timeNum 循环时间
  @param block 循环方法
  */
-- (void)startTimerWithSpace:(float)timeNum block:(void(^)(BOOL))block;
+- (void)startTimerWithSpace:(float)timeNum block:(void(^)(void))block;
 
 
 /**

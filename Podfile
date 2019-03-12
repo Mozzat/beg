@@ -11,13 +11,19 @@ target 'KneelBeg' do
   pod "CTMediator"
   pod 'FDFullscreenPopGesture'
   pod 'IQKeyboardManager'
-  pod 'SDWebImage'
+  pod 'SDWebImage', '~>3.7.2'
+  pod 'Bugly'
+  pod 'YYKit'  
 
   #高度地图sdk
   pod 'AMap2DMap-NO-IDFA'
   pod 'AMapLocation-NO-IDFA'
   pod 'AMapSearch-NO-IDFA'
-	
+ 
+  #极光
+  pod 'JPush'
+  pod 'JMessage'
+
   # Pods for KneelBeg
 
   target 'KneelBegTests' do

@@ -7,9 +7,6 @@
 //
 
 #import "CustomAnnotationView.h"
-#import "GrabDetialVC.h"
-#import "BaseNavigationController.h"
-#import "TabBarVC.h"
 
 #define kCalloutWidth       212.0
 #define kCalloutHeight      80.0
@@ -38,7 +35,7 @@
             self.calloutView.userInteractionEnabled = YES;
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoDetialVC)];
             [self.calloutView addGestureRecognizer:tap];
-            
+            self.calloutView.dataDic = self.dataDic;
             
         }
         
@@ -54,13 +51,19 @@
     
 }
 
+
 - (void)gotoDetialVC{
     
-    TabBarVC *tabbar = (TabBarVC *)[UIApplication sharedApplication].keyWindow.rootViewController;
-    GrabDetialVC *detial = [[GrabDetialVC alloc]init];
-    detial.hidesBottomBarWhenPushed = YES;
-    BaseNavigationController *nav = (BaseNavigationController *)tabbar.selectedViewController;
-    [nav pushViewController:detial animated:YES];
+//    NSString *type = self.dataDic[@"type"];
+    if (self.block) {
+        self.block(self.dataDic);
+    }
+    
+}
+
+- (void)setDataDic:(NSDictionary *)dataDic{
+    
+    _dataDic = dataDic;
     
 }
 

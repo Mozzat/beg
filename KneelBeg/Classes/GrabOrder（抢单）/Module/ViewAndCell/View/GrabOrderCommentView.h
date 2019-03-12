@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^GrabOrderWriteAction)(void);
+
 @interface GrabOrderCommentView : UIView
+
+@property (nonatomic, copy) GrabOrderWriteAction writeAction;
 
 @end
 

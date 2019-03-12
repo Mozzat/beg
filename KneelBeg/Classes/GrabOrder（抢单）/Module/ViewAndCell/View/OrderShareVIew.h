@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^OrderShareViewCommentBlock)(void);
+
 @interface OrderShareVIew : UIView
+
+@property (nonatomic, copy) OrderShareViewCommentBlock commentBlock;
 
 @end
 

@@ -21,30 +21,43 @@ PODS:
     - AMapFoundation-NO-IDFA (~> 1.4)
   - AMapSearch-NO-IDFA (6.6.0):
     - AMapFoundation-NO-IDFA (~> 1.4)
+  - Bugly (2.5.0)
   - CTMediator (25)
   - FDFullscreenPopGesture (1.1)
   - IQKeyboardManager (6.2.0)
+  - JCore (1.2.6)
+  - JMessage (3.8.0):
+    - JCore (~> 1.0)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
   - Masonry (1.1.0)
   - MZTCommon (1.0.5)
   - MZTNetWorking (1.0.5):
     - AFNetworking
     - ProgressHUD
   - ProgressHUD (2.60)
-  - SDWebImage (4.4.5):
-    - SDWebImage/Core (= 4.4.5)
-  - SDWebImage/Core (4.4.5)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AMap2DMap-NO-IDFA
   - AMapLocation-NO-IDFA
   - AMapSearch-NO-IDFA
+  - Bugly
   - CTMediator
   - FDFullscreenPopGesture
   - IQKeyboardManager
+  - JMessage
+  - JPush
   - Masonry
   - MZTCommon
   - MZTNetWorking (= 1.0.5)
-  - SDWebImage
+  - SDWebImage (~> 3.7.2)
+  - YYKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -53,14 +66,19 @@ SPEC REPOS:
     - AMapFoundation-NO-IDFA
     - AMapLocation-NO-IDFA
     - AMapSearch-NO-IDFA
+    - Bugly
     - CTMediator
     - FDFullscreenPopGesture
     - IQKeyboardManager
+    - JCore
+    - JMessage
+    - JPush
     - Masonry
     - MZTCommon
     - MZTNetWorking
     - ProgressHUD
     - SDWebImage
+    - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -68,15 +86,20 @@ SPEC CHECKSUMS:
   AMapFoundation-NO-IDFA: 40d723b352992d0f95abe2976f0c0ecda3c3ffc3
   AMapLocation-NO-IDFA: ffd69b8b88f553d0b252d4967bf301ad2afff9c0
   AMapSearch-NO-IDFA: 07651afae010f7acda12beb1f2c0f45d29069e75
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JMessage: 14355feac1f0b914c2ec813aede07cdcc8eddd1f
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MZTCommon: 63eb5e83144240c15a97eadb2a89b76da957c3a2
   MZTNetWorking: fd305cd42e25f0cab5f34f75b4faa1c9604965d3
   ProgressHUD: 4e4efbaf4f5de8bd32e0c4c3b6644a90ea1a8c3e
-  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: a26be8bd7229d5b3e58dbbeffe9381e760898a91
+PODFILE CHECKSUM: b5cab0c846658298c925d7be63e9a41be0256ed7
 
 COCOAPODS: 1.6.0

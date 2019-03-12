@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGFloat)listenEnvironmentMusic;
 
+@property (nonatomic, copy)   NSString        *filePath;
+
 @end
 
 NS_ASSUME_NONNULL_END

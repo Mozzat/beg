@@ -135,9 +135,18 @@
         [_addBtn setTitle:@"添加评论..." forState:UIControlStateNormal];
         [_addBtn setTitleColor:HexColor(@"b9b9b9") forState:UIControlStateNormal];
         _addBtn.titleLabel.font = Font15();
+        [_addBtn addTarget:self action:@selector(addCommentAction) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return _addBtn;
+}
+
+- (void)addCommentAction{
+    
+    if (self.writeAction) {
+        self.writeAction();
+    }
+    
 }
 
 @end

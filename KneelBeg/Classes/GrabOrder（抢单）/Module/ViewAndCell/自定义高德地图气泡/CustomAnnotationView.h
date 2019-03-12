@@ -11,9 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^CustomAnnotationViewBlock)(NSDictionary *dic);
 @interface CustomAnnotationView : MAAnnotationView
 
 @property (nonatomic, readonly) CustomCallouView *calloutView;
+@property (nonatomic, strong)   NSDictionary     *dataDic;
+@property (nonatomic, copy)     CustomAnnotationViewBlock block;
 
 @end
 

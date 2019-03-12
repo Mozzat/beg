@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^RedPackageCell1Block)(NSString *str, NSInteger row);
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RedPackageCell1 : UITableViewCell
@@ -15,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString  *titleS;
 @property (nonatomic, copy) NSString  *rightS;
 @property (nonatomic, copy) NSString  *placeHolder;
+
+@property (nonatomic, assign) NSInteger row;
+@property (nonatomic, copy)   RedPackageCell1Block block;
 
 @end
 

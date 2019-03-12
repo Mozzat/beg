@@ -182,6 +182,7 @@ static float maxRecorderDuration = 60;
 - (void)openPublishVoiceVC{
     
     PublishVoiceVC *publish = [[PublishVoiceVC alloc]init];
+    publish.path = [self.recorderManager.filePath stringByReplacingOccurrencesOfString:@"wav" withString:@"mp3"];
     [self.navigationController pushViewController:publish animated:YES];
     
 }

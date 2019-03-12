@@ -18,6 +18,6 @@ typedef void(^LYFPhotoModelAction)(void);
 /// 高清图
 @property (nonatomic, strong) UIImage *highDefinitionImage;
 /// 获取图片成功事件
-@property (nonatomic, copy) LYFPhotoModelAction getPictureAction;
+@property (nonatomic, copy)   LYFPhotoModelAction getPictureAction;
 
 @end

@@ -15,6 +15,14 @@
 #import "OrderShareVIew.h"
 #import "GrabOrderCommentView.h"
 #import "UIButton+ImageTitleSpacing.h"
+//#import "CTMediator+ChatViewController.h"
+//#import "ChatViewController.h"
+#import "ConversationViewController.h"
+#import <IQKeyboardManager.h>
+#import <JMessage/JMessage.h>
+#import "CommentListView.h"
+#import <UINavigationController+FDFullscreenPopGesture.h>
+#import "OrderDetialWriteCommentView.h"
 
 @interface GrabDetialVC ()
 
@@ -25,6 +33,8 @@
 @property (nonatomic, strong) OrderShareVIew            *shareView;
 @property (nonatomic, strong) GrabOrderCommentView      *commentView;
 @property (nonatomic, strong) UIView                    *bottomView;
+@property (nonatomic, strong) CommentListView           *commentListView;
+@property (nonatomic, strong) OrderDetialWriteCommentView *writeCommentView;
 
 @end
 
@@ -42,6 +52,19 @@
     
     [super viewDidAppear:animated];
     self.sliderScrollView.data = @[@"http://p1.img.cctvpic.com/cportal/img/2019/2/25/1551109029441_938_792x670.jpg",@"http://t11.baidu.com/it/u=538889017,157038003&fm=173&app=49&f=JPEG?w=640&h=725&s=A50042F9648B7AFCCC11C11F030090C2"];
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    
+    [super viewDidDisappear:animated];
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+    
+}
+
+- (BOOL)fd_prefersNavigationBarHidden{
+    
+    return YES;
     
 }
 
@@ -49,10 +72,43 @@
     
     self.navigationItem.title = @"抢单详情";
     
-    UIButton *rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [rightBtn setImage:[UIImage imageNamed:@"发单更多"] forState:UIControlStateNormal];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    UIView *navitationView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, BDTopHeight)];
+    navitationView.backgroundColor = whiteColor();
+    [self.view addSubview:navitationView];
     
+    UILabel *navigationTitle = [[UILabel alloc]init];
+    navigationTitle.textColor = blackColor();
+    navigationTitle.font = BlodFont(18);
+    navigationTitle.text = @"抢单详情";
+    [navitationView addSubview:navigationTitle];
+    
+    [navigationTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(navitationView).offset(BDStatusBarHeight);
+        make.centerX.equalTo(navitationView);
+        make.bottom.equalTo(navitationView);
+        
+    }];
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(0, BDStatusBarHeight, 44, 44);
+    [backButton setImage:[UIImage imageNamed:@"评论页面-返回"] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(closeCurrentVC) forControlEvents:UIControlEventTouchUpInside];
+    backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    [navitationView addSubview:backButton];
+    
+    UIButton *rightBtn = [[UIButton alloc]init];
+    [rightBtn setImage:[UIImage imageNamed:@"发单更多"] forState:UIControlStateNormal];
+    rightBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [navitationView addSubview:rightBtn];
+    
+    [rightBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(navitationView);
+        make.right.equalTo(navitationView).offset(-20);
+        make.width.height.mas_equalTo(44);
+        
+    }];
     
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, BDTopHeight, SCREEN_WIDTH, SCREENH_HEIGHT - BDTopHeight - BDBottomHeight - 50)];
     scrollView.backgroundColor = whiteColor();
@@ -127,7 +183,11 @@
     }];
     
     [self.view addSubview:self.bottomView];
+    [self.view addSubview:self.commentListView];
+    self.commentListView.hidden = YES;
     
+    [self.view addSubview:self.writeCommentView];
+    self.writeCommentView.hidden = YES;
     
 }
 
@@ -170,6 +230,14 @@
     
     if (!_commentView) {
         _commentView = [[GrabOrderCommentView alloc]init];
+        
+        LRWeakSelf(self);
+        _commentView.writeAction = ^{
+          
+            LRStrongSelf(self);
+            [self.writeCommentView showAnimation];
+            
+        };
     }
     
     return _commentView;
@@ -180,8 +248,36 @@
     if (!_shareView) {
         _shareView = [[OrderShareVIew alloc]init];
         
+        LRWeakSelf(self);
+        _shareView.commentBlock = ^{
+            
+            LRStrongSelf(self);
+            self.commentListView.hidden = NO;
+            [self.commentListView startAnimation];
+            
+        };
+        
     }
     return _shareView;
+}
+
+- (CommentListView *)commentListView{
+    
+    if (!_commentListView ) {
+        
+        _commentListView = [[CommentListView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT)];
+        
+    }
+    return _commentListView;
+}
+
+- (OrderDetialWriteCommentView *)writeCommentView{
+    
+    if (!_writeCommentView) {
+        _writeCommentView = [[OrderDetialWriteCommentView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT)];
+        
+    }
+    return _writeCommentView;
 }
 
 - (UIView *)bottomView{
@@ -197,6 +293,7 @@
         [consultBtn setTitleColor:blackColor() forState:UIControlStateNormal];
         consultBtn.titleLabel.font = Font16();
         [consultBtn layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleLeft imageTitleSpace:5];
+        [consultBtn addTarget:self action:@selector(pushChatView) forControlEvents:UIControlEventTouchUpInside];
         [_bottomView addSubview:consultBtn];
         
         UIButton *callBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/3.0, 0, SCREEN_WIDTH/3.0, _bottomView.height)];
@@ -217,6 +314,48 @@
         
     }
     return _bottomView;
+}
+
+#pragma mark----点击事件
+- (void)pushChatView{
+    
+//    UIViewController *vc = [[CTMediator sharedInstance] chatViewControllerMediatorWithParame:@{}];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+//    ChatViewController *chat = [[ChatViewController alloc]init];
+//    [self.navigationController pushViewController:chat animated:YES];
+    
+//      ConversationViewController *chat = [[ConversationViewController alloc]init];
+//      [self.navigationController pushViewController:chat animated:YES];
+    
+    [JMSGUser loginWithUsername:@"tao1" password:@"tao1" completionHandler:^(id resultObject, NSError *error) {
+        
+        [self getSingleConversation];
+        
+    }];
+    
+}
+
+- (void)getSingleConversation {
+    JMSGConversation *conversation = [JMSGConversation singleConversationWithUsername:@"username1"];
+    if (conversation == nil) {
+        
+        [JMSGConversation createSingleConversationWithUsername:@"username1" completionHandler:^(id resultObject, NSError *error) {
+            if (error) {
+                NSLog(@"创建会话失败");
+                return ;
+            }
+            
+            ConversationViewController *conversationVC = [[ConversationViewController alloc] init];
+            conversationVC.conversation = resultObject;
+            [self.navigationController pushViewController:conversationVC animated:YES];
+            
+        }];
+    } else {
+        ConversationViewController *conversationVC = [[ConversationViewController alloc] init];
+        conversationVC.conversation = conversation;
+        [self.navigationController pushViewController:conversationVC animated:YES];
+    }
 }
 
 @end

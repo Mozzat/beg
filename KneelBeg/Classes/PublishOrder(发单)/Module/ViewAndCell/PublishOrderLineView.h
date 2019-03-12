@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^PublishOrderInputBlock)(NSString *text);
+
 typedef NS_ENUM(NSInteger , PublishOrderLineType) {
     
     PublishOrderLineTypeInput = 0 ,///输入
@@ -44,6 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param textColor 文字颜色
  */
 - (void)setContent:(NSString *)content WithTextColor:(UIColor *)textColor;
+
+@property (nonatomic, copy)  PublishOrderInputBlock block;
 
 @end
 

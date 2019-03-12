@@ -19,5 +19,9 @@
 #import <MZTCommon/InlineDefault1.h>
 #import "UIView+Common.h"  ///
 #import "Util.h"  ///工具类
+#import "HttpManagerRequest.h"
+#import <YYKit.h>
+#import "JKRemindView.h"
+#import "UserModelManager.h"
 
 #endif /* PrefixHeader_pch */

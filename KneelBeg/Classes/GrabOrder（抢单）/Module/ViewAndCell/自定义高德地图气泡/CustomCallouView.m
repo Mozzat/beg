@@ -7,6 +7,7 @@
 //
 
 #import "CustomCallouView.h"
+#import "UIImageView+Load.h"
 
 @interface CustomCallouView ()
 
@@ -138,6 +139,16 @@
     CGContextAddArcToPoint(context, maxx, miny, maxx, maxx, radius);
     CGContextAddArcToPoint(context, maxx, maxy, midx, maxy, radius);
     CGContextClosePath(context);
+}
+
+- (void)setDataDic:(NSDictionary *)dataDic{
+    
+    _dataDic =dataDic;
+    [self.headView loadImageViewWithImageString:dataDic[@"headImage"] WithPlaceHoldeImage:@"红包图标"];
+    self.amountLab.attributedText = [Util mutableStringWithTitle:[NSString stringWithFormat:@"¥%@",dataDic[@"price"]] WithString1:[NSString stringWithFormat:@"%@",dataDic[@"price"]] WithAttrDic1:@{NSFontAttributeName : Font22()}];
+    self.detialLab.text = dataDic[@"_name"];
+    
+    
 }
 
 @end

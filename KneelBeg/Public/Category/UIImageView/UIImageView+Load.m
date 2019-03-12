@@ -17,7 +17,7 @@
     if (![Util isBlankString:imageUrl]) {
         
         NSString *currentImageStr = [imageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        [self sd_setImageWithURL:[NSURL URLWithString:currentImageStr] placeholderImage:[UIImage imageNamed:imageStr] options: SDWebImageScaleDownLargeImages];
+        [self sd_setImageWithURL:[NSURL URLWithString:currentImageStr] placeholderImage:[UIImage imageNamed:imageStr] options: SDWebImageProgressiveDownload];
         
     } else {
         

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PublistWordsOrderVC : BaseViewController
 
+@property (nonatomic, strong) NSMutableArray *imageArr;
+
 @end
 
 NS_ASSUME_NONNULL_END

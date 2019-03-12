@@ -27,7 +27,7 @@
     self = [super init];
     if (self) {
         _timerStatus = YUTimerStatusStop;
-        self.isFirst = YES;
+//        self.isFirst = YES;
     }
     return self;
 }
@@ -46,13 +46,8 @@
     dispatch_source_set_event_handler(self.timer, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            if (self.isFirst) {
-                self.isFirst = NO;
-                
-            } else {
-                if (block) {
-                    block(YES);
-                }
+            if (block) {
+                block(YES);
             }
             
         });

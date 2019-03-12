@@ -10,6 +10,8 @@
 #import "LaunchPageVC.h"
 #import "AppDelegate+AMapService.h"
 #import "AppDelegate+IQKeyboardManager.h"
+#import "AppDelegate+JPush.h"
+#import "AppDelegate+Bugly.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [self registAction];
+    [self registActionWithOptions:launchOptions];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[LaunchPageVC alloc]init];
@@ -31,13 +33,19 @@
     return YES;
 }
 
-- (void)registAction{
+- (void)registActionWithOptions:(NSDictionary *)launchOptions{
     
     ///高德地图服务注册
     [self registAMapServiceAction];
     
     ///键盘管理
     [self registIQKeyboard];
+    
+    ///注册极光
+    [self registJPushWithOptions:launchOptions];
+    
+    ///注册bugly
+    [self registBuglySDK];
     
 }
 

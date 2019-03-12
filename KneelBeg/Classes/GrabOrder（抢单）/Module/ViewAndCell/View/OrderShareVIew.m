@@ -106,9 +106,17 @@
         _messageBtn = [[UIShareButton alloc]init];
         _messageBtn.imageS = @"发单消息";
         _messageBtn.titleS = @"333";
+        [_messageBtn addTarget:self action:@selector(tapCommentAction) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return _messageBtn;
+}
+
+- (void)tapCommentAction{
+    
+    if (self.commentBlock) {
+        self.commentBlock();
+    }
 }
 
 @end

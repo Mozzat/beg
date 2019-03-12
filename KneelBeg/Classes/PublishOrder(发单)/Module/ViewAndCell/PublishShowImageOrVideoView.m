@@ -75,6 +75,8 @@ static NSString *cellId = @"PublishShowImageOrVideoView";
     
     if (indexPath.item < self.data.count) {
         
+        cell.imageModel = self.data[indexPath.row];
+        
     } else {
         
         [cell setLocationImage:@"添加图片视频"];

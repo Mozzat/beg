@@ -125,4 +125,11 @@
     
 }
 
+- (void)setContentS:(NSString *)contentS{
+    
+    _contentS = contentS;
+    self.contentLab.text = contentS;
+    
+}
+
 @end

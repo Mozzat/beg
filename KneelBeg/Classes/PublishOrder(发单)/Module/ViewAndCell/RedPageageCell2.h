@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RedPageageCell2 : UITableViewCell
 
 @property (nonatomic, copy) NSString  *titleS;
+@property (nonatomic, copy) NSString  *contentS;
 
 @end
 

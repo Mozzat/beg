@@ -111,6 +111,7 @@
         _textField.textAlignment = NSTextAlignmentRight;
         _textField.keyboardType = UIKeyboardTypeNumberPad;
         _textField.tintColor = blackColor();
+        [_textField addTarget:self action:@selector(textChangeTextField:) forControlEvents:UIControlEventEditingChanged];
         
     }
     return _textField;
@@ -134,6 +135,14 @@
     
     _placeHolder = placeHolder;
     self.textField.placeholder = placeHolder;
+    
+}
+
+- (void)textChangeTextField:(UITextField *)textF{
+    
+    if (self.block) {
+        self.block(textF.text, self.row);
+    }
     
 }
 

@@ -7,10 +7,16 @@
 //
 
 #import "PublishVoiceVC.h"
+#import <UINavigationController+FDFullscreenPopGesture.h>
 #import "PublishOrderLineView.h"
 #import "UITextView+Placeholder.h"
 #import "PublishVoiceView.h"
-#import <UINavigationController+FDFullscreenPopGesture.h>
+#import "PublishShowImageOrVideoView.h"
+#import "DataPickView.h"
+#import "PublishPayMethedView.h"
+#import "LYFPhotoModel.h"
+#import "LocationManager.h"
+#import "PublishSuccessVC.h"
 
 @interface PublishVoiceVC ()
 
@@ -24,6 +30,43 @@
 
 @property (nonatomic, strong) UIButton     *publishBtn;
 
+@property (nonatomic, strong) UIView        *middleView;
+
+///时间数组
+@property (nonatomic, strong) NSArray        *timeArr;
+///活动类别
+@property (nonatomic, strong) NSArray        *categoryArr;
+///活动保存
+@property (nonatomic, strong) NSDictionary   *categoryDic;
+///支付方式
+@property (nonatomic, strong) NSArray        *payTypeArr;
+///交易方式
+@property (nonatomic, strong) NSArray        *tradeTypeArr;
+
+@property (nonatomic, strong) NSMutableDictionary *imageDic;
+
+@property (nonatomic, weak)   PublishPayMethedView *m1View;
+@property (nonatomic, weak)   PublishPayMethedView *m2View;
+
+///价格
+@property (nonatomic, copy)   NSString       *price;
+///支付类型
+@property (nonatomic, copy)   NSString       *payType;
+///活动类型
+@property (nonatomic, copy)   NSString       *categoryType;
+///交易方式
+@property (nonatomic, copy)   NSString       *tradeTyp;
+///持续时间
+@property (nonatomic, copy)   NSString       *time;
+///经度
+@property (nonatomic, copy)   NSString       *nLongitude;
+///维度
+@property (nonatomic, copy)   NSString       *nLatitude;
+
+@property (nonatomic, weak)   DataPickView   *pickView1;
+
+@property (nonatomic, weak)   DataPickView   *pickView2;
+
 @end
 
 @implementation PublishVoiceVC
@@ -31,7 +74,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self locationPoint];
+    
     [self setLocationUI];
+    
+    [self getOrderWords];
     
 }
 
@@ -40,6 +88,14 @@
     return  YES;
     
 }
+
+- (void)locationPoint{
+    
+    [[LocationManager sharedInstance] startUpdatingLocation];
+    [LocationManager sharedInstance].locationDelegate = self;
+    
+}
+
 
 - (void)setLocationUI{
     
@@ -160,19 +216,19 @@
     
     UIView *middleView = [[UIView alloc]init];
     middleView.backgroundColor = whiteColor();
+    self.middleView = middleView;
     [containView addSubview:middleView];
     [middleView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(topView.mas_bottom).offset(10);
         make.left.right.equalTo(containView);
-        make.height.mas_equalTo(300);
         make.bottom.equalTo(containView);
         
     }];
     
-    NSArray *titleArr = @[@"价格",@"分类",@"时间",@"支付方式",@"交易方式"];
+    NSArray *titleArr = @[@"价格",@"分类",@"时间"];
     PublishOrderLineView *lastView = nil;
-    for (NSInteger index = 0 ; index < 5; index ++) {
+    for (NSInteger index = 0 ; index < 3; index ++) {
         
         PublishOrderLineType type =  PublishOrderLineTypeInput;
         if (index != 0) {
@@ -182,13 +238,68 @@
         PublishOrderLineView *lineView = [[PublishOrderLineView alloc]initWithFrame:CGRectMake(0, index * 60, SCREEN_WIDTH, 60) WithType:type];
         [lineView setTitles:titleArr[index]];
         [middleView addSubview:lineView];
+        [lineView addTarget:self action:@selector(publishOrderLineAction:) forControlEvents:UIControlEventTouchUpInside];
+        lineView.tag = 1111 + index;
         lastView = lineView;
         
         if (index == 1) {
             [lineView setContent:@"跑腿" WithTextColor:blackColor()];
+            
+        }
+        
+        if (index == 0) {
+            
+            LRWeakSelf(self);
+            lineView.block = ^(NSString *text) {
+                LRStrongSelf(self);
+                self.price = text;
+            };
+            
         }
         
     }
+    
+    PublishPayMethedView *m1 = [[PublishPayMethedView alloc]init];
+    m1.titleS = @"支付方式";
+    [middleView addSubview:m1];
+    self.m1View = m1;
+    
+    LRWeakSelf(self);
+    m1.bloack = ^(NSDictionary *dic) {
+        LRStrongSelf(self);
+        self.payType = dic[@"cKey"];
+    };
+    
+    [m1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(lastView.mas_bottom);
+        make.left.equalTo(middleView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+        make.height.mas_greaterThanOrEqualTo(60);
+        
+    }];
+    
+    PublishPayMethedView *m2 = [[PublishPayMethedView alloc]init];
+    m2.titleS = @"交易方式";
+    [middleView addSubview:m2];
+    self.m2View = m2;
+    
+    m2.bloack = ^(NSDictionary *dic) {
+        
+        LRStrongSelf(self);
+        self.tradeTyp = dic[@"cKey"];
+        
+    };
+    
+    [m2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(m1.mas_bottom);
+        make.left.equalTo(middleView);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+        make.height.mas_greaterThanOrEqualTo(60);
+        make.bottom.equalTo(middleView);
+        
+    }];
     
     [self.view addSubview:self.publishBtn];
     [self.publishBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -199,6 +310,61 @@
         make.height.mas_equalTo(45);
         
     }];
+    
+}
+
+- (void)initWebData:(NSDictionary *)dic{
+    
+    ///时间限制
+    NSArray *timeLimitArr = dic[@"timeLimit"];
+    NSInteger maxTime = 0;
+    NSInteger minTime = 0;
+    
+    for (NSDictionary *timeDic in timeLimitArr) {
+        
+        if ([timeDic[@"cKey"] isEqualToString:@"ORDER_MAX_TIME"]) {
+            maxTime = [timeDic[@"cValue"] integerValue];
+            
+        } else {
+            minTime = [timeDic[@"cValue"] integerValue];
+            
+        }
+        
+    }
+    
+    if (minTime == 0) {
+        
+        minTime = 1;
+        
+    }
+    
+    NSMutableArray *timeArr = [NSMutableArray array];
+    for (NSInteger index = minTime; index <= maxTime; index ++) {
+        
+        [timeArr addObject:[NSString stringWithFormat:@"%ld小时",index]];
+        
+    }
+    
+    self.timeArr = [timeArr mutableCopy];
+    
+    self.tradeTypeArr = dic[@"tradeType"];
+    self.payTypeArr = dic[@"payType"];
+    
+    NSMutableDictionary *categoryDic = [NSMutableDictionary dictionary];
+    NSMutableArray *categoryArr = [NSMutableArray array];
+    
+    for (NSDictionary *category in dic[@"category"]) {
+        
+        [categoryDic setValue:category[@"cKey"] forKey:category[@"cValue"]];
+        [categoryArr addObject:category[@"cValue"]];
+        
+    }
+    
+    self.categoryArr = [categoryArr mutableCopy];
+    self.categoryDic = [categoryDic mutableCopy];
+    
+    ///刷新
+    [self reloadUIData];
     
 }
 
@@ -255,13 +421,16 @@
         _publishBtn = [[UIButton alloc]init];
         [_publishBtn rounded:4];
         [_publishBtn setBackgroundColor:redColorAlpha()];
-        _publishBtn.enabled = NO;
+//        _publishBtn.enabled = NO;
         [_publishBtn setTitle:@"确认发布" forState:UIControlStateNormal];
+        [_publishBtn addTarget:self action:@selector(uploadImageFileRequest) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return _publishBtn;
 }
 
+
+#pragma mark---点击事件
 - (void)closeAction{
     
     for (BaseViewController *vc in self.navigationController.viewControllers) {
@@ -273,6 +442,164 @@
         }
         
     }
+    
+}
+
+- (void)publishOrderLineAction:(PublishOrderLineView *)view{
+    
+    NSInteger tag = view.tag - 1111;
+    
+    if (tag == 0) {
+        
+    } else if (tag == 1) {
+        
+        [self.view endEditing:YES];
+        
+        DataPickView *pickView = [[DataPickView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT)];
+        pickView.data = self.categoryArr;
+        self.pickView2 = pickView;
+        [pickView startAnimation];
+        
+        
+        LRWeakSelf(self);
+        pickView.block = ^(NSString *title) {
+            
+            LRStrongSelf(self);
+            self.categoryType = self.categoryDic[title];
+            
+            PublishOrderLineView *line = [self.middleView viewWithTag:1111 + tag];
+            [line setContent:title WithTextColor:blackColor()];
+            
+            [self.pickView2 hideAnimation];
+            
+        };
+        
+    } else if (tag == 2) {
+        
+        [self.view endEditing:YES];
+        
+        DataPickView *pickView = [[DataPickView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT)];
+        pickView.data = self.timeArr;
+        self.pickView1 = pickView;
+        [pickView startAnimation];
+        
+        
+        LRWeakSelf(self);
+        pickView.block = ^(NSString *title) {
+            
+            LRStrongSelf(self);
+            self.time = [title stringByReplacingOccurrencesOfString:@"小时" withString:@""];
+            PublishOrderLineView *line = [self.middleView viewWithTag:1111 + tag];
+            [line setContent:title WithTextColor:blackColor()];
+            [self.pickView1 hideAnimation];
+        };
+        
+    }
+    
+}
+
+- (void)reloadUIData{
+    
+    self.m1View.data = self.payTypeArr;
+    self.m2View.data = self.tradeTypeArr;
+    
+}
+
+#pragma mark---网络请求
+- (void)getOrderWords{
+    
+    [HttpManagerRequest publishOrderWithWordsWithSuccessBlock:^(id result) {
+        
+        NSDictionary *dic = (NSDictionary *)result;
+        if ([[Util getJsonResultState:dic] isEqualToString:successKey]) {
+            
+            [self initWebData:dic[@"data"]];
+            
+        } else {
+            
+            
+        }
+        
+    } WithFailBlock:^(id result) {
+        
+    }];
+    
+}
+
+- (void)uploadImageFileRequest{
+    
+    [HttpManagerRequest uploadOrderAudioWithArr:self.path WithSort:0 WithSuccessBlock:^(id result) {
+       
+        NSDictionary *dic = (NSDictionary *)result;
+        if ([[Util getJsonResultState:dic] isEqualToString:successKey]) {
+            
+            [self publistRequest:dic[@"data"]];
+            
+        } else {
+            
+            
+        }
+        
+    } WithFailBlock:^(id result) {
+        
+    }];
+    
+}
+
+
+///发布接口
+- (void)publistRequest:(NSDictionary *)imageDic{
+    
+    NSMutableArray *arr = [NSMutableArray array];
+    NSArray *allKeys = [imageDic allKeys];
+
+    for (NSString *key in allKeys) {
+
+        NSMutableDictionary *imgDic = [NSMutableDictionary dictionary];
+        imgDic[@"cType"] = @"AUDIO";
+        imgDic[@"nOrder"] = key;
+        imgDic[@"cPath"] = imageDic[key];
+        [arr addObject:imgDic];
+
+    }
+
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"mediaListJson"] = [arr modelToJSONString];
+    parameter[@"orderType"] = @"COMMON";
+    parameter[@"userId"] = [UserModelManager getUserId];
+    parameter[@"cTitle"] = self.titleTextF.text;
+    parameter[@"cDesc"] = self.contetnText.text;
+    parameter[@"cCategory"] = self.categoryType;
+    parameter[@"nPrice"] = self.price;
+    parameter[@"nLongitude"] = self.nLongitude;
+    parameter[@"nLatitude"] = self.nLatitude;
+    parameter[@"cPayType"] = self.payType;
+    parameter[@"cTradeType"] = self.tradeTyp;
+    parameter[@"timeDuration"] = self.time;
+
+    [HttpManagerRequest publishOrderWithParameter:parameter WithSuccessBlock:^(id result) {
+
+        NSDictionary *dic = (NSDictionary *)result;
+        if ([[Util getJsonResultState:dic] isEqualToString:successKey]) {
+
+            PublishSuccessVC *successVC = [[PublishSuccessVC alloc]init];
+            [self.navigationController pushViewController:successVC animated:YES];
+
+        }
+
+    } WithFailBlock:^(id result) {
+
+    }];
+    
+}
+
+#pragma mark---<LocationManagerDelegate>
+- (void)finishLocationWithLocation:(CLLocation *)location reGeocode:(AMapLocationReGeocode *)reGeocode{
+    
+    self.nLongitude = @(location.coordinate.longitude).stringValue;
+    self.nLatitude = @(location.coordinate.latitude).stringValue;
+    
+    NSLog(@"%@---%@",self.nLongitude,self.nLatitude);
     
 }
 
