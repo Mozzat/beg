@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FoucuesView : UIView
 
+@property (nonatomic, copy)   NSString     *addressStr;
+@property (nonatomic, strong) NSDictionary *dataDic ;
+
 @end
 
 NS_ASSUME_NONNULL_END

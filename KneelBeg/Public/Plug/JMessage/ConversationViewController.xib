@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConversationViewController">
             <connections>
                 <outlet property="imuiInputView" destination="Z0f-3v-Dnw" id="us5-ah-IFW"/>
+                <outlet property="listTopConstraint" destination="yIO-1Z-IuA" id="JpP-dS-iaY"/>
                 <outlet property="messageList" destination="PKj-qg-VAG" id="weh-kB-mH9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,11 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKj-qg-VAG" customClass="IMUIMessageCollectionView" customModule="JMessage_AuroraIMUI_OC_Demo" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKj-qg-VAG" customClass="IMUIMessageCollectionView" customModule="KneelBeg" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0f-3v-Dnw" customClass="IMUIInputView" customModule="JMessage_AuroraIMUI_OC_Demo" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0f-3v-Dnw" customClass="IMUIInputView" customModule="KneelBeg" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="560" width="375" height="107"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
@@ -39,7 +40,7 @@
                 <constraint firstItem="Z0f-3v-Dnw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XzY-9B-vxL"/>
                 <constraint firstAttribute="trailing" secondItem="Z0f-3v-Dnw" secondAttribute="trailing" id="hCv-Uc-e8Q"/>
                 <constraint firstItem="PKj-qg-VAG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wBL-50-khx"/>
-                <constraint firstItem="PKj-qg-VAG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yIO-1Z-IuA"/>
+                <constraint firstItem="PKj-qg-VAG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="yIO-1Z-IuA"/>
             </constraints>
             <point key="canvasLocation" x="14.5" y="79.5"/>
         </view>

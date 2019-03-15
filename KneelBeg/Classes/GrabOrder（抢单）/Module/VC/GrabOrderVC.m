@@ -403,6 +403,7 @@
     } else {
         
         GrabDetialVC *detial = [[GrabDetialVC alloc]init];
+        detial.orderNo = dic[@"orderNo"];
         detial.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:detial animated:YES];
         

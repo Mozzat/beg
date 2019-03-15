@@ -144,7 +144,7 @@ extension IMUIMessageCollectionView: UICollectionViewDelegate, UICollectionViewD
     
     return CGSize.zero
   }
-  
+    
   public func collectionView(_ collectionView: UICollectionView,
                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     

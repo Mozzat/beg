@@ -108,5 +108,11 @@
     return _timeLab;
 }
 
+- (void)setDataDic:(NSDictionary *)dataDic{
+    
+    _dataDic = dataDic;
+    self.priceLab.attributedText = [Util mutableStringWithTitle:[NSString stringWithFormat:@"¥%.2f",[dataDic[@"nPrice"] floatValue]] WithString1:[NSString stringWithFormat:@"%.2f",[dataDic[@"nPrice"] floatValue]] WithAttrDic1:@{NSFontAttributeName : BlodFont(20)}];
+    
+}
 
 @end

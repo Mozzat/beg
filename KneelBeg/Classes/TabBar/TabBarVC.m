@@ -8,9 +8,10 @@
 
 #import "TabBarVC.h"
 #import "BaseNavigationController.h"
-#import "GrabOrderVC.h"
-#import "MineVC.h"
-//#import "SendOrderVC.h"
+#import "BaseViewController.h"
+//#import "GrabOrderVC.h"
+//#import "MineVC.h"
+//#import "MessageVC.h"
 
 @interface TabBarVC ()
 
@@ -24,10 +25,11 @@
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : HexColor(@"b9b9b9")} forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : redColor()} forState:UIControlStateSelected];
+    self.tabBar.translucent = NO;
     
-    NSArray *titleArr =@[@"抢单",@"发单",@"发单"];
-    NSArray *vcArr = @[@"GrabOrderVC",@"SendOrderVC",@"MineVC"];
-    NSArray *imageArr = @[@"抢单",@"发单",@"发单"];
+    NSArray *titleArr =@[@"抢单",@"发单",@"消息",@"我的"];
+    NSArray *vcArr = @[@"GrabOrderVC",@"SendOrderVC",@"MessageVC",@"MineVC"];
+    NSArray *imageArr = @[@"抢单",@"发单",@"消息",@"我的"];
     
     for (NSInteger index = 0; index < vcArr.count; index++) {
         

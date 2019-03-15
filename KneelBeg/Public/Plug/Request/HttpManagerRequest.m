@@ -64,6 +64,42 @@
     
 }
 
++ (void)getCollectionActionWithOrderNo:(NSString *)orderNo WithHandle:(BOOL)handle WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"orderNo"] = orderNo;
+    parameter[@"handle"] = @(handle).stringValue;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"userId"] = [UserModelManager getUserId];
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:Order_Collect_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)getCommentOrderDataWithOrderNo:(NSString *)orderNo WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"orderNo"] = orderNo;
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:Order_QueryDetail_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)acceptOrderWithOrderNo:(NSString *)orderNo WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"orderNo"] = orderNo;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"userId"] = [UserModelManager getUserId];
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:VieOrder_VieOrder_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
 + (void)grabRedPacketWithParameter:(NSMutableDictionary *)parameter WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
     
     if ([UserModelManager userIsLogin]) {
@@ -134,6 +170,123 @@
     [HttpNetworkManager requestMethedWithType:Post WithIsFile:YES WithUrl:File_UploadFile_API WithParametr:parameter WithFileArray:@[model] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
     
     
+}
+
++ (void)getCommentListData:(NSMutableDictionary *)parameter WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    parameter[@"pageSize"] = @"10";
+    parameter[@"orderByClause"] = @"date";
+    parameter[@"code"] = kCommonCode_Key;
+    parameter[@"key"] = kCommonKey;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"userId"] = UserModelManager.getUserId;
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:Comment_SelectByTargett_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)getCommentCount:(NSMutableDictionary *)parameter WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    parameter[@"code"] = kCommonCode_Key;
+    parameter[@"key"] = kCommonKey;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"userId"] = UserModelManager.getUserId;
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:Comment_SelectCountByTarget_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)commentLikeOrDislike:(NSString *)commentId WithHandle:(BOOL)handle WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"commentId"] = commentId;
+    parameter[@"handle"] = @(handle).stringValue;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"userId"] = UserModelManager.getUserId;
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:Comment_Like_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)addCommentDataWithOrderNo:(NSString *)orderNo WithMessage:(NSString *)message WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"code"] = kCommonCode_Key;
+    parameter[@"key"] = kCommonKey;
+    parameter[@"value"] = orderNo;
+    parameter[@"content"] = message;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"authorId"] = UserModelManager.getUserId;
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Post WithIsFile:NO WithUrl:Comment_AddComment_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)addReplyCommentDataWithMessage:(NSString *)message WithType:(NSInteger)type WithCommentId:(NSInteger)commentId WithReplayId:(NSInteger)replayId WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"content"] = message;
+    parameter[@"target"] = @(type).stringValue;
+    parameter[@"commentId"] = @(commentId).stringValue;
+    parameter[@"replyId"] = type == 1 ? @"0":@(replayId).stringValue ;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"authorId"] = UserModelManager.getUserId;
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Post WithIsFile:NO WithUrl:Reply_AddReply_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)replyCommentLikeOrDislike:(NSString *)replyId WithHandle:(BOOL)handle WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"replyId"] = replyId ;
+    parameter[@"handle"] = @(handle).stringValue ;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"userId"] = UserModelManager.getUserId;
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:Reply_Like_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)selectByCommentId:(NSInteger)commentId WithPage:(NSInteger)page WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"commentId"] = @(commentId).stringValue;
+    parameter[@"pageNum"] =  @(page).stringValue;
+    parameter[@"pageSize"] = kPageSize;
+    
+    if ([UserModelManager userIsLogin]) {
+        
+        parameter[@"userId"] = UserModelManager.getUserId;
+        
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:Reply_SelectByCommentId_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
+    
+}
+
++ (void)selectByCommentId:(NSInteger)commentId WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"commentId"] = @(commentId).stringValue;
+    
+    if ([UserModelManager userIsLogin]) {
+        parameter[@"userId"] = UserModelManager.getUserId;
+    }
+    
+    [HttpNetworkManager requestMethedWithType:Get WithIsFile:NO WithUrl:Comment_SelectById_API WithParametr:parameter WithFileArray:@[] WithSuccessBlock:successBlock WithFaileBlock:failBlock];
 }
 
 @end

@@ -565,7 +565,7 @@
 
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     parameter[@"mediaListJson"] = [arr modelToJSONString];
-    parameter[@"orderType"] = @"COMMON";
+    parameter[@"orderType"] = @"COMMON_AUDIO";
     parameter[@"userId"] = [UserModelManager getUserId];
     parameter[@"cTitle"] = self.titleTextF.text;
     parameter[@"cDesc"] = self.contetnText.text;

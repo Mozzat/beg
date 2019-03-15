@@ -162,6 +162,8 @@
 		76330C7A223789F300354C37 /* 设置@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76330C6A223789F300354C37 /* 设置@2x.png */; };
 		76330C7D22378ACD00354C37 /* MIneHeadVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 76330C7C22378ACD00354C37 /* MIneHeadVIew.m */; };
 		76330C80223793A700354C37 /* MIneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76330C7F223793A700354C37 /* MIneCell.m */; };
+		76330C832237AFF000354C37 /* 键盘表情@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76330C812237AFF000354C37 /* 键盘表情@2x.png */; };
+		76330C842237AFF000354C37 /* 键盘表情@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76330C822237AFF000354C37 /* 键盘表情@3x.png */; };
 		76393FA0221BEB3F00F9E174 /* SendOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76393F9F221BEB3F00F9E174 /* SendOrderVC.m */; };
 		76393FA3221BF56900F9E174 /* SendBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76393FA2221BF56900F9E174 /* SendBottomView.m */; };
 		76393FA6221BF72700F9E174 /* SendTypeOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76393FA5221BF72700F9E174 /* SendTypeOrderVC.m */; };
@@ -325,6 +327,22 @@
 		769EFFAA221A43A90032BA76 /* CustomCallouView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769EFFA9221A43A90032BA76 /* CustomCallouView.m */; };
 		769EFFAD221A49AA0032BA76 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769EFFAC221A49AA0032BA76 /* CustomAnnotationView.m */; };
 		76A1419E221AABB900BCEDBF /* GrabOrderWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A1419D221AABB900BCEDBF /* GrabOrderWaterFlowLayout.m */; };
+		76A2C3F1223895CD00E8E295 /* ConversationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A2C3F0223895CD00E8E295 /* ConversationVC.m */; };
+		76A2C3F42238E74100E8E295 /* ConversationTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A2C3F32238E74100E8E295 /* ConversationTopView.m */; };
+		76A2C3F72238FD7700E8E295 /* 打电话黑@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C3F52238FD7700E8E295 /* 打电话黑@3x.png */; };
+		76A2C3F82238FD7700E8E295 /* 打电话黑@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C3F62238FD7700E8E295 /* 打电话黑@2x.png */; };
+		76A2C3FA2239070700E8E295 /* 头像男孩@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C3F92239070700E8E295 /* 头像男孩@2x.png */; };
+		76A2C3FE223908E800E8E295 /* 美女头像.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C3FD223908E800E8E295 /* 美女头像.jpg */; };
+		76A2C4092239E58D00E8E295 /* MyGrabOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A2C4082239E58D00E8E295 /* MyGrabOrderVC.m */; };
+		76A2C4142239E76600E8E295 /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A2C4132239E76600E8E295 /* MessageVC.m */; };
+		76A2C4192239E88800E8E295 /* 消息-选中@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C4152239E88700E8E295 /* 消息-选中@3x.png */; };
+		76A2C41A2239E88800E8E295 /* 消息-选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C4162239E88800E8E295 /* 消息-选中@2x.png */; };
+		76A2C41B2239E88800E8E295 /* 消息@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C4172239E88800E8E295 /* 消息@2x.png */; };
+		76A2C41C2239E88800E8E295 /* 消息@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C4182239E88800E8E295 /* 消息@3x.png */; };
+		76A2C4212239E89700E8E295 /* 我的@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C41D2239E89600E8E295 /* 我的@2x.png */; };
+		76A2C4222239E89700E8E295 /* 我的-选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C41E2239E89600E8E295 /* 我的-选中@2x.png */; };
+		76A2C4232239E89700E8E295 /* 我的-选中@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C41F2239E89700E8E295 /* 我的-选中@3x.png */; };
+		76A2C4242239E89700E8E295 /* 我的@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A2C4202239E89700E8E295 /* 我的@3x.png */; };
 		76BF3B8F22237D7C0079C898 /* AppDelegate+IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B8E22237D7C0079C898 /* AppDelegate+IQKeyboardManager.m */; };
 		76BF3B92222382E90079C898 /* GrabDetialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B91222382E90079C898 /* GrabDetialVC.m */; };
 		76BF3B95222383250079C898 /* FoucuesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B94222383250079C898 /* FoucuesView.m */; };
@@ -355,6 +373,27 @@
 		76BF3BE322250FE80079C898 /* 发单喜欢@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BE122250FE80079C898 /* 发单喜欢@2x.png */; };
 		76BF3BE6222538170079C898 /* 发单更多@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BE4222538170079C898 /* 发单更多@3x.png */; };
 		76BF3BE7222538170079C898 /* 发单更多@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BF3BE5222538170079C898 /* 发单更多@2x.png */; };
+		76DFAD522239F0F500A9A395 /* BaseMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD512239F0F500A9A395 /* BaseMessageView.m */; };
+		76DFAD552239F87900A9A395 /* MessageOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD542239F87900A9A395 /* MessageOrderView.m */; };
+		76DFAD582239F91200A9A395 /* MessageTradView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD572239F91200A9A395 /* MessageTradView.m */; };
+		76DFAD5B2239F92300A9A395 /* MessageSystemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD5A2239F92300A9A395 /* MessageSystemView.m */; };
+		76DFAD5E2239F92F00A9A395 /* MessageUserVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD5D2239F92F00A9A395 /* MessageUserVIew.m */; };
+		76DFAD612239F94600A9A395 /* BaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD602239F94600A9A395 /* BaseMessageCell.m */; };
+		76DFAD64223A2FE100A9A395 /* MessageBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD63223A2FE100A9A395 /* MessageBtn.m */; };
+		76DFAD67223A40CB00A9A395 /* 编辑状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD65223A40CA00A9A395 /* 编辑状态@2x.png */; };
+		76DFAD68223A40CB00A9A395 /* 编辑状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD66223A40CB00A9A395 /* 编辑状态@3x.png */; };
+		76DFAD6B223A40DD00A9A395 /* 普通状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD69223A40DD00A9A395 /* 普通状态@2x.png */; };
+		76DFAD6C223A40DD00A9A395 /* 普通状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD6A223A40DD00A9A395 /* 普通状态@3x.png */; };
+		76DFAD6F223A49BA00A9A395 /* BaseMessageCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD6E223A49BA00A9A395 /* BaseMessageCell1.m */; };
+		76DFAD7A223B378C00A9A395 /* OrderInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD79223B378C00A9A395 /* OrderInformation.m */; };
+		76DFAD85223B5A7600A9A395 /* OrderProgressingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD84223B5A7600A9A395 /* OrderProgressingVC.m */; };
+		76DFAD88223B987100A9A395 /* PayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFAD87223B987100A9A395 /* PayView.m */; };
+		76DFAD8B223BA46200A9A395 /* 微信支付图标@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD89223BA46200A9A395 /* 微信支付图标@3x.png */; };
+		76DFAD8C223BA46200A9A395 /* 微信支付图标@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD8A223BA46200A9A395 /* 微信支付图标@2x.png */; };
+		76DFAD8F223BA4A200A9A395 /* 红包@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD8D223BA4A100A9A395 /* 红包@2x.png */; };
+		76DFAD90223BA4A200A9A395 /* 红包@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD8E223BA4A200A9A395 /* 红包@3x.png */; };
+		76DFAD93223BA4BA00A9A395 /* 支付宝图标@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD91223BA4B900A9A395 /* 支付宝图标@3x.png */; };
+		76DFAD94223BA4BA00A9A395 /* 支付宝图标@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DFAD92223BA4BA00A9A395 /* 支付宝图标@2x.png */; };
 		76F715D32236057C00A4A62A /* CTMediator+Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F715D22236057C00A4A62A /* CTMediator+Comment.m */; };
 		76F715D9223605C600A4A62A /* Target_Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F715D8223605C600A4A62A /* Target_Comment.m */; };
 		76F715DC2236064100A4A62A /* CommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F715DB2236064100A4A62A /* CommentVC.m */; };
@@ -564,6 +603,8 @@
 		76330C7C22378ACD00354C37 /* MIneHeadVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIneHeadVIew.m; sourceTree = "<group>"; };
 		76330C7E223793A700354C37 /* MIneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIneCell.h; sourceTree = "<group>"; };
 		76330C7F223793A700354C37 /* MIneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIneCell.m; sourceTree = "<group>"; };
+		76330C812237AFF000354C37 /* 键盘表情@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "键盘表情@2x.png"; sourceTree = "<group>"; };
+		76330C822237AFF000354C37 /* 键盘表情@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "键盘表情@3x.png"; sourceTree = "<group>"; };
 		76393F9E221BEB3F00F9E174 /* SendOrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendOrderVC.h; sourceTree = "<group>"; };
 		76393F9F221BEB3F00F9E174 /* SendOrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendOrderVC.m; sourceTree = "<group>"; };
 		76393FA1221BF56900F9E174 /* SendBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendBottomView.h; sourceTree = "<group>"; };
@@ -797,6 +838,26 @@
 		769EFFAC221A49AA0032BA76 /* CustomAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
 		76A1419C221AABB900BCEDBF /* GrabOrderWaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrabOrderWaterFlowLayout.h; sourceTree = "<group>"; };
 		76A1419D221AABB900BCEDBF /* GrabOrderWaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrabOrderWaterFlowLayout.m; sourceTree = "<group>"; };
+		76A2C3EF223895CD00E8E295 /* ConversationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversationVC.h; sourceTree = "<group>"; };
+		76A2C3F0223895CD00E8E295 /* ConversationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversationVC.m; sourceTree = "<group>"; };
+		76A2C3F22238E74100E8E295 /* ConversationTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversationTopView.h; sourceTree = "<group>"; };
+		76A2C3F32238E74100E8E295 /* ConversationTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversationTopView.m; sourceTree = "<group>"; };
+		76A2C3F52238FD7700E8E295 /* 打电话黑@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "打电话黑@3x.png"; sourceTree = "<group>"; };
+		76A2C3F62238FD7700E8E295 /* 打电话黑@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "打电话黑@2x.png"; sourceTree = "<group>"; };
+		76A2C3F92239070700E8E295 /* 头像男孩@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像男孩@2x.png"; sourceTree = "<group>"; };
+		76A2C3FD223908E800E8E295 /* 美女头像.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女头像.jpg"; sourceTree = "<group>"; };
+		76A2C4072239E58D00E8E295 /* MyGrabOrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyGrabOrderVC.h; sourceTree = "<group>"; };
+		76A2C4082239E58D00E8E295 /* MyGrabOrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyGrabOrderVC.m; sourceTree = "<group>"; };
+		76A2C4122239E76600E8E295 /* MessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageVC.h; sourceTree = "<group>"; };
+		76A2C4132239E76600E8E295 /* MessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageVC.m; sourceTree = "<group>"; };
+		76A2C4152239E88700E8E295 /* 消息-选中@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息-选中@3x.png"; sourceTree = "<group>"; };
+		76A2C4162239E88800E8E295 /* 消息-选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息-选中@2x.png"; sourceTree = "<group>"; };
+		76A2C4172239E88800E8E295 /* 消息@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "消息@2x.png"; path = "../../../../../../../Downloads/跪求V1.00-删减版/assets/消息@2x.png"; sourceTree = "<group>"; };
+		76A2C4182239E88800E8E295 /* 消息@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "消息@3x.png"; path = "../../../../../../../Downloads/跪求V1.00-删减版/assets/消息@3x.png"; sourceTree = "<group>"; };
+		76A2C41D2239E89600E8E295 /* 我的@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的@2x.png"; sourceTree = "<group>"; };
+		76A2C41E2239E89600E8E295 /* 我的-选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的-选中@2x.png"; sourceTree = "<group>"; };
+		76A2C41F2239E89700E8E295 /* 我的-选中@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的-选中@3x.png"; sourceTree = "<group>"; };
+		76A2C4202239E89700E8E295 /* 我的@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的@3x.png"; sourceTree = "<group>"; };
 		76BF3B8D22237D7C0079C898 /* AppDelegate+IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+IQKeyboardManager.h"; sourceTree = "<group>"; };
 		76BF3B8E22237D7C0079C898 /* AppDelegate+IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+IQKeyboardManager.m"; sourceTree = "<group>"; };
 		76BF3B90222382E90079C898 /* GrabDetialVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrabDetialVC.h; sourceTree = "<group>"; };
@@ -842,6 +903,38 @@
 		76BF3BE4222538170079C898 /* 发单更多@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单更多@3x.png"; sourceTree = "<group>"; };
 		76BF3BE5222538170079C898 /* 发单更多@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发单更多@2x.png"; sourceTree = "<group>"; };
 		76BF3BEA222668E20079C898 /* KneelBeg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KneelBeg.entitlements; sourceTree = "<group>"; };
+		76DFAD502239F0F500A9A395 /* BaseMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMessageView.h; sourceTree = "<group>"; };
+		76DFAD512239F0F500A9A395 /* BaseMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMessageView.m; sourceTree = "<group>"; };
+		76DFAD532239F87900A9A395 /* MessageOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageOrderView.h; sourceTree = "<group>"; };
+		76DFAD542239F87900A9A395 /* MessageOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageOrderView.m; sourceTree = "<group>"; };
+		76DFAD562239F91200A9A395 /* MessageTradView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTradView.h; sourceTree = "<group>"; };
+		76DFAD572239F91200A9A395 /* MessageTradView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTradView.m; sourceTree = "<group>"; };
+		76DFAD592239F92300A9A395 /* MessageSystemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSystemView.h; sourceTree = "<group>"; };
+		76DFAD5A2239F92300A9A395 /* MessageSystemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageSystemView.m; sourceTree = "<group>"; };
+		76DFAD5C2239F92F00A9A395 /* MessageUserVIew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageUserVIew.h; sourceTree = "<group>"; };
+		76DFAD5D2239F92F00A9A395 /* MessageUserVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageUserVIew.m; sourceTree = "<group>"; };
+		76DFAD5F2239F94600A9A395 /* BaseMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMessageCell.h; sourceTree = "<group>"; };
+		76DFAD602239F94600A9A395 /* BaseMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMessageCell.m; sourceTree = "<group>"; };
+		76DFAD62223A2FE100A9A395 /* MessageBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageBtn.h; sourceTree = "<group>"; };
+		76DFAD63223A2FE100A9A395 /* MessageBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageBtn.m; sourceTree = "<group>"; };
+		76DFAD65223A40CA00A9A395 /* 编辑状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑状态@2x.png"; sourceTree = "<group>"; };
+		76DFAD66223A40CB00A9A395 /* 编辑状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑状态@3x.png"; sourceTree = "<group>"; };
+		76DFAD69223A40DD00A9A395 /* 普通状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "普通状态@2x.png"; sourceTree = "<group>"; };
+		76DFAD6A223A40DD00A9A395 /* 普通状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "普通状态@3x.png"; sourceTree = "<group>"; };
+		76DFAD6D223A49BA00A9A395 /* BaseMessageCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMessageCell1.h; sourceTree = "<group>"; };
+		76DFAD6E223A49BA00A9A395 /* BaseMessageCell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMessageCell1.m; sourceTree = "<group>"; };
+		76DFAD78223B378C00A9A395 /* OrderInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderInformation.h; sourceTree = "<group>"; };
+		76DFAD79223B378C00A9A395 /* OrderInformation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderInformation.m; sourceTree = "<group>"; };
+		76DFAD83223B5A7600A9A395 /* OrderProgressingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderProgressingVC.h; sourceTree = "<group>"; };
+		76DFAD84223B5A7600A9A395 /* OrderProgressingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderProgressingVC.m; sourceTree = "<group>"; };
+		76DFAD86223B987100A9A395 /* PayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayView.h; sourceTree = "<group>"; };
+		76DFAD87223B987100A9A395 /* PayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayView.m; sourceTree = "<group>"; };
+		76DFAD89223BA46200A9A395 /* 微信支付图标@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信支付图标@3x.png"; sourceTree = "<group>"; };
+		76DFAD8A223BA46200A9A395 /* 微信支付图标@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信支付图标@2x.png"; sourceTree = "<group>"; };
+		76DFAD8D223BA4A100A9A395 /* 红包@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红包@2x.png"; sourceTree = "<group>"; };
+		76DFAD8E223BA4A200A9A395 /* 红包@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红包@3x.png"; sourceTree = "<group>"; };
+		76DFAD91223BA4B900A9A395 /* 支付宝图标@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付宝图标@3x.png"; sourceTree = "<group>"; };
+		76DFAD92223BA4BA00A9A395 /* 支付宝图标@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付宝图标@2x.png"; sourceTree = "<group>"; };
 		76F715D12236057C00A4A62A /* CTMediator+Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+Comment.h"; sourceTree = "<group>"; };
 		76F715D22236057C00A4A62A /* CTMediator+Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+Comment.m"; sourceTree = "<group>"; };
 		76F715D7223605C600A4A62A /* Target_Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_Comment.h; sourceTree = "<group>"; };
@@ -921,6 +1014,10 @@
 				7606859A2229027B0030EF50 /* JMessageBridge */,
 				7606853E222901910030EF50 /* JMessageTest.swift */,
 				7606863C222906D70030EF50 /* KneelBeg-Bridging-Header.h */,
+				76A2C3EF223895CD00E8E295 /* ConversationVC.h */,
+				76A2C3F0223895CD00E8E295 /* ConversationVC.m */,
+				76A2C3F22238E74100E8E295 /* ConversationTopView.h */,
+				76A2C3F32238E74100E8E295 /* ConversationTopView.m */,
 			);
 			path = JMessage;
 			sourceTree = "<group>";
@@ -1713,13 +1810,17 @@
 		7695C81922164D7B00ADD365 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				76DFAD7B223B57D000A9A395 /* OrderProgress（订单流程） */,
 				7695C8232216521400ADD365 /* LaunchAndGuidancePage */,
 				7695C83722165F1B00ADD365 /* TabBar */,
 				7673651A222E4E5500F5AE0D /* Login */,
 				7695C81A22164D9500ADD365 /* GrabOrder（抢单） */,
 				7695C83E221664C600ADD365 /* PublishOrder(发单) */,
 				7673652D222E610000F5AE0D /* Mine */,
-				76F715C92236044200A4A62A /* Comment */,
+				76F715C92236044200A4A62A /* Comment(评论) */,
+				76A2C3FF2239E4BD00E8E295 /* MineOrder(我的抢单) */,
+				76A2C40A2239E66D00E8E295 /* Message(消息) */,
+				76DFAD70223B36C200A9A395 /* OrderInformation(交易信息) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -2001,6 +2102,9 @@
 		7695C845221665BD00ADD365 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				76A2C3FD223908E800E8E295 /* 美女头像.jpg */,
+				76A2C3F62238FD7700E8E295 /* 打电话黑@2x.png */,
+				76A2C3F52238FD7700E8E295 /* 打电话黑@3x.png */,
 				76155978221A8E4300DFB406 /* 坐标模式@2x.png */,
 				76155979221A8E4300DFB406 /* 坐标模式@3x.png */,
 				764EA8422216B21800113557 /* 跪求标题@2x.png */,
@@ -2024,6 +2128,11 @@
 				7695C86422169EE800ADD365 /* 红包退出图标@2x.png */,
 				7695C86322169EE800ADD365 /* 红包退出图标@3x.png */,
 				7695C86A22169EE800ADD365 /* 消息@2x.png */,
+				76A2C41E2239E89600E8E295 /* 我的-选中@2x.png */,
+				76A2C41F2239E89700E8E295 /* 我的-选中@3x.png */,
+				76A2C41D2239E89600E8E295 /* 我的@2x.png */,
+				76A2C4202239E89700E8E295 /* 我的@3x.png */,
+				76A2C4182239E88800E8E295 /* 消息@3x.png */,
 				7695C86622169EE800ADD365 /* 消息@3x.png */,
 				7695C86722169EE800ADD365 /* 信用图标@2x.png */,
 				7695C86822169EE800ADD365 /* 信用图标@3x.png */,
@@ -2069,6 +2178,10 @@
 				7681ED74223260C40031FBBB /* 圆圈@3x.png */,
 				7681ED78223261880031FBBB /* 箭头复选@2x.png */,
 				7681ED79223261880031FBBB /* 箭头复选@3x.png */,
+				76A2C3F92239070700E8E295 /* 头像男孩@2x.png */,
+				76A2C4162239E88800E8E295 /* 消息-选中@2x.png */,
+				76A2C4152239E88700E8E295 /* 消息-选中@3x.png */,
+				76A2C4172239E88800E8E295 /* 消息@2x.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -2155,6 +2268,156 @@
 			path = "自定义高德地图气泡";
 			sourceTree = "<group>";
 		};
+		76A2C3FF2239E4BD00E8E295 /* MineOrder(我的抢单) */ = {
+			isa = PBXGroup;
+			children = (
+				76A2C4002239E55800E8E295 /* Interface */,
+				76A2C4012239E55800E8E295 /* Module */,
+				76A2C4052239E55800E8E295 /* Resource */,
+			);
+			path = "MineOrder(我的抢单)";
+			sourceTree = "<group>";
+		};
+		76A2C4002239E55800E8E295 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		76A2C4012239E55800E8E295 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				76A2C4022239E55800E8E295 /* ViewAndCell */,
+				76A2C4032239E55800E8E295 /* VC */,
+				76A2C4042239E55800E8E295 /* Model */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		76A2C4022239E55800E8E295 /* ViewAndCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewAndCell;
+			sourceTree = "<group>";
+		};
+		76A2C4032239E55800E8E295 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				76A2C4072239E58D00E8E295 /* MyGrabOrderVC.h */,
+				76A2C4082239E58D00E8E295 /* MyGrabOrderVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		76A2C4042239E55800E8E295 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76A2C4052239E55800E8E295 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				76A2C4062239E55800E8E295 /* image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		76A2C4062239E55800E8E295 /* image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		76A2C40A2239E66D00E8E295 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				76A2C40D2239E69100E8E295 /* Interface */,
+				76A2C40E2239E69100E8E295 /* Module */,
+				76A2C40B2239E69100E8E295 /* Resource */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		76A2C40B2239E69100E8E295 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				76A2C40C2239E69100E8E295 /* image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		76A2C40C2239E69100E8E295 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD65223A40CA00A9A395 /* 编辑状态@2x.png */,
+				76DFAD66223A40CB00A9A395 /* 编辑状态@3x.png */,
+				76DFAD69223A40DD00A9A395 /* 普通状态@2x.png */,
+				76DFAD6A223A40DD00A9A395 /* 普通状态@3x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		76A2C40D2239E69100E8E295 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		76A2C40E2239E69100E8E295 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				76A2C40F2239E69100E8E295 /* ViewAndCell */,
+				76A2C4102239E69100E8E295 /* VC */,
+				76A2C4112239E69100E8E295 /* Model */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		76A2C40F2239E69100E8E295 /* ViewAndCell */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD502239F0F500A9A395 /* BaseMessageView.h */,
+				76DFAD512239F0F500A9A395 /* BaseMessageView.m */,
+				76DFAD532239F87900A9A395 /* MessageOrderView.h */,
+				76DFAD542239F87900A9A395 /* MessageOrderView.m */,
+				76DFAD562239F91200A9A395 /* MessageTradView.h */,
+				76DFAD572239F91200A9A395 /* MessageTradView.m */,
+				76DFAD592239F92300A9A395 /* MessageSystemView.h */,
+				76DFAD5A2239F92300A9A395 /* MessageSystemView.m */,
+				76DFAD5C2239F92F00A9A395 /* MessageUserVIew.h */,
+				76DFAD5D2239F92F00A9A395 /* MessageUserVIew.m */,
+				76DFAD5F2239F94600A9A395 /* BaseMessageCell.h */,
+				76DFAD602239F94600A9A395 /* BaseMessageCell.m */,
+				76DFAD6D223A49BA00A9A395 /* BaseMessageCell1.h */,
+				76DFAD6E223A49BA00A9A395 /* BaseMessageCell1.m */,
+				76DFAD62223A2FE100A9A395 /* MessageBtn.h */,
+				76DFAD63223A2FE100A9A395 /* MessageBtn.m */,
+			);
+			path = ViewAndCell;
+			sourceTree = "<group>";
+		};
+		76A2C4102239E69100E8E295 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				76A2C4122239E76600E8E295 /* MessageVC.h */,
+				76A2C4132239E76600E8E295 /* MessageVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		76A2C4112239E69100E8E295 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		76BF3B8C22237D7C0079C898 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -2220,14 +2483,152 @@
 			path = certificate;
 			sourceTree = "<group>";
 		};
-		76F715C92236044200A4A62A /* Comment */ = {
+		76DFAD70223B36C200A9A395 /* OrderInformation(交易信息) */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD71223B374A00A9A395 /* Interface */,
+				76DFAD74223B374A00A9A395 /* Module */,
+				76DFAD72223B374A00A9A395 /* Resource */,
+			);
+			path = "OrderInformation(交易信息)";
+			sourceTree = "<group>";
+		};
+		76DFAD71223B374A00A9A395 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		76DFAD72223B374A00A9A395 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD73223B374A00A9A395 /* image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		76DFAD73223B374A00A9A395 /* image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		76DFAD74223B374A00A9A395 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD75223B374A00A9A395 /* ViewAndCell */,
+				76DFAD76223B374A00A9A395 /* VC */,
+				76DFAD77223B374A00A9A395 /* Model */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		76DFAD75223B374A00A9A395 /* ViewAndCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewAndCell;
+			sourceTree = "<group>";
+		};
+		76DFAD76223B374A00A9A395 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD78223B378C00A9A395 /* OrderInformation.h */,
+				76DFAD79223B378C00A9A395 /* OrderInformation.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		76DFAD77223B374A00A9A395 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76DFAD7B223B57D000A9A395 /* OrderProgress（订单流程） */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD7E223B581500A9A395 /* Interface */,
+				76DFAD7F223B581500A9A395 /* Module */,
+				76DFAD7C223B581500A9A395 /* Resource */,
+			);
+			path = "OrderProgress（订单流程）";
+			sourceTree = "<group>";
+		};
+		76DFAD7C223B581500A9A395 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD7D223B581500A9A395 /* image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		76DFAD7D223B581500A9A395 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD8A223BA46200A9A395 /* 微信支付图标@2x.png */,
+				76DFAD89223BA46200A9A395 /* 微信支付图标@3x.png */,
+				76DFAD8D223BA4A100A9A395 /* 红包@2x.png */,
+				76DFAD8E223BA4A200A9A395 /* 红包@3x.png */,
+				76DFAD92223BA4BA00A9A395 /* 支付宝图标@2x.png */,
+				76DFAD91223BA4B900A9A395 /* 支付宝图标@3x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		76DFAD7E223B581500A9A395 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		76DFAD7F223B581500A9A395 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD80223B581500A9A395 /* ViewAndCell */,
+				76DFAD81223B581500A9A395 /* VC */,
+				76DFAD82223B581500A9A395 /* Model */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		76DFAD80223B581500A9A395 /* ViewAndCell */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD86223B987100A9A395 /* PayView.h */,
+				76DFAD87223B987100A9A395 /* PayView.m */,
+			);
+			path = ViewAndCell;
+			sourceTree = "<group>";
+		};
+		76DFAD81223B581500A9A395 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				76DFAD83223B5A7600A9A395 /* OrderProgressingVC.h */,
+				76DFAD84223B5A7600A9A395 /* OrderProgressingVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		76DFAD82223B581500A9A395 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76F715C92236044200A4A62A /* Comment(评论) */ = {
 			isa = PBXGroup;
 			children = (
 				76F715D02236051F00A4A62A /* Interface */,
 				76F715CA2236051F00A4A62A /* Module */,
 				76F715CE2236051F00A4A62A /* Resource */,
 			);
-			path = Comment;
+			path = "Comment(评论)";
 			sourceTree = "<group>";
 		};
 		76F715CA2236051F00A4A62A /* Module */ = {
@@ -2284,6 +2685,8 @@
 		76F715CF2236051F00A4A62A /* image */ = {
 			isa = PBXGroup;
 			children = (
+				76330C812237AFF000354C37 /* 键盘表情@2x.png */,
+				76330C822237AFF000354C37 /* 键盘表情@3x.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -2473,17 +2876,25 @@
 				7606862B2229027B0030EF50 /* incoming_voice_1@3x.png in Resources */,
 				7611BBEB2230BC6700CA77C3 /* 红包上@3x.png in Resources */,
 				76330C77223789F300354C37 /* 商务合作@2x.png in Resources */,
+				76DFAD6B223A40DD00A9A395 /* 普通状态@2x.png in Resources */,
+				76A2C4242239E89700E8E295 /* 我的@3x.png in Resources */,
+				76A2C3F72238FD7700E8E295 /* 打电话黑@3x.png in Resources */,
 				76BF3BC52224CCF10079C898 /* 发单消息@2x.png in Resources */,
 				76393FC1221BFC0D00F9E174 /* 发单-选中@3x.png in Resources */,
 				7695C85A221699EC00ADD365 /* 筛选@3x.png in Resources */,
 				76393FAE221BF89200F9E174 /* 红包发布@2x.png in Resources */,
+				76A2C4232239E89700E8E295 /* 我的-选中@3x.png in Resources */,
 				76393FC7221BFC5F00F9E174 /* 抢单@2x.png in Resources */,
+				76DFAD8C223BA46200A9A395 /* 微信支付图标@2x.png in Resources */,
 				7606860B2229027B0030EF50 /* IMUIGalleryCell.xib in Resources */,
 				7606862F2229027B0030EF50 /* incoming_voice_1@2x.png in Resources */,
+				76DFAD8F223BA4A200A9A395 /* 红包@2x.png in Resources */,
+				76A2C3FA2239070700E8E295 /* 头像男孩@2x.png in Resources */,
 				7606861E2229027B0030EF50 /* incoming_voice_2@3x.png in Resources */,
 				76BF3BB52223CA240079C898 /* 发单收藏@2x.png in Resources */,
 				7606863B222906A80030EF50 /* ConversationViewController.xib in Resources */,
 				76330C79223789F300354C37 /* 我的点赞@3x.png in Resources */,
+				76DFAD94223BA4BA00A9A395 /* 支付宝图标@2x.png in Resources */,
 				7695C86B22169EE800ADD365 /* 红包退出图标@3x.png in Resources */,
 				7611BBEA2230BC6700CA77C3 /* 红包底@2x.png in Resources */,
 				76BF3BC42224CCF10079C898 /* 发单咨询@3x.png in Resources */,
@@ -2517,6 +2928,7 @@
 				761A501D222FDC4E00D12B0F /* 红包坐标@3x.png in Resources */,
 				7645556F221E53B800F71DAA /* 发单更多@2x.png in Resources */,
 				76455562221D81AF00F71DAA /* 添加图片视频@3x.png in Resources */,
+				76330C842237AFF000354C37 /* 键盘表情@3x.png in Resources */,
 				76393FBE221BFC0D00F9E174 /* 发单@3x.png in Resources */,
 				76330C6F223789F300354C37 /* 我的发单@2x.png in Resources */,
 				76BF3BC22224CCF10079C898 /* 发单消息@3x.png in Resources */,
@@ -2531,26 +2943,34 @@
 				76330C71223789F300354C37 /* 我的收藏@2x.png in Resources */,
 				76736518222E06D200F5AE0D /* 发布成功@2x.png in Resources */,
 				76BF3BB42223CA240079C898 /* 发单分享@2x.png in Resources */,
+				76DFAD90223BA4A200A9A395 /* 红包@3x.png in Resources */,
 				760686222229027B0030EF50 /* login_02@2x.png in Resources */,
 				760686162229027B0030EF50 /* login_01@2x.png in Resources */,
 				760686112229027B0030EF50 /* login_01@3x.png in Resources */,
 				767E8D8A221F9B09004611F5 /* 上滑-取消发布@3x.png in Resources */,
 				767E8D89221F9B09004611F5 /* 上滑-取消发布@2x.png in Resources */,
+				76A2C4212239E89700E8E295 /* 我的@2x.png in Resources */,
 				76393FD0221C014C00F9E174 /* 确定位置按钮@3x.png in Resources */,
 				7606862C2229027B0030EF50 /* incoming_voice_3@2x.png in Resources */,
 				7676EA8D2230B15000FEBAFF /* 红包不能领取@3x.png in Resources */,
 				76BF3BB32223CA240079C898 /* 发单收藏@3x.png in Resources */,
 				760686212229027B0030EF50 /* outgoing_voice_1@2x.png in Resources */,
+				76DFAD93223BA4BA00A9A395 /* 支付宝图标@3x.png in Resources */,
 				7606862A2229027B0030EF50 /* outGoing_bubble@2x.png in Resources */,
 				76BF3BC92224CD0F0079C898 /* 发单打电话@2x.png in Resources */,
 				7695C85C221699EC00ADD365 /* 搜索@3x.png in Resources */,
 				7681ED77223260C50031FBBB /* 圆圈@2x.png in Resources */,
+				76330C832237AFF000354C37 /* 键盘表情@2x.png in Resources */,
 				760686262229027B0030EF50 /* outgoing_voice_3@2x.png in Resources */,
 				760686132229027B0030EF50 /* inComing_bubble@3x.png in Resources */,
+				76A2C41C2239E88800E8E295 /* 消息@3x.png in Resources */,
+				76DFAD67223A40CB00A9A395 /* 编辑状态@2x.png in Resources */,
 				7695C86F22169EE900ADD365 /* 信用图标@2x.png in Resources */,
 				767E8D82221F9AF0004611F5 /* 麦克风语音5@3x.png in Resources */,
+				76DFAD8B223BA46200A9A395 /* 微信支付图标@3x.png in Resources */,
 				7620FAF02216A7AE008A7488 /* 气球坐标@2x.png in Resources */,
 				7606860F2229027B0030EF50 /* IMUIFeatureListIconCell.xib in Resources */,
+				76DFAD6C223A40DD00A9A395 /* 普通状态@3x.png in Resources */,
 				76BF3BE222250FE80079C898 /* 发单喜欢@3x.png in Resources */,
 				76330C75223789F300354C37 /* 我的发单@3x.png in Resources */,
 				7645558E221EA01300F71DAA /* 组件删除@2x.png in Resources */,
@@ -2572,8 +2992,10 @@
 				76455583221E9A2B00F71DAA /* 语音1@2x.png in Resources */,
 				7681ED76223260C50031FBBB /* 圆圈@3x.png in Resources */,
 				7695C86C22169EE800ADD365 /* 红包退出图标@2x.png in Resources */,
+				76A2C41B2239E88800E8E295 /* 消息@2x.png in Resources */,
 				76330C74223789F300354C37 /* 我的点赞@2x.png in Resources */,
 				760686202229027B0030EF50 /* outgoing_voice_3@3x.png in Resources */,
+				76DFAD68223A40CB00A9A395 /* 编辑状态@3x.png in Resources */,
 				76455586221E9A2B00F71DAA /* 语音3@2x.png in Resources */,
 				76393FBF221BFC0D00F9E174 /* 发单@2x.png in Resources */,
 				76455585221E9A2B00F71DAA /* 语音2@3x.png in Resources */,
@@ -2596,10 +3018,12 @@
 				767E8D86221F9AF0004611F5 /* 麦克风语音4@2x.png in Resources */,
 				76393FB5221BF8C000F9E174 /* 发单关闭@3x.png in Resources */,
 				7695C86E22169EE800ADD365 /* 消息@3x.png in Resources */,
+				76A2C3FE223908E800E8E295 /* 美女头像.jpg in Resources */,
 				760686192229027B0030EF50 /* incoming_voice_2@2x.png in Resources */,
 				76BF3BE7222538170079C898 /* 发单更多@2x.png in Resources */,
 				7681ED64223209570031FBBB /* 红包金额背景@3x.png in Resources */,
 				761A5029222FEB9F00D12B0F /* 红包关闭@2x.png in Resources */,
+				76A2C3F82238FD7700E8E295 /* 打电话黑@2x.png in Resources */,
 				760686152229027B0030EF50 /* inComing_bubble@2x.png in Resources */,
 				767E8D80221F9AF0004611F5 /* 麦克风语音4@3x.png in Resources */,
 				76455584221E9A2B00F71DAA /* 语音2@2x.png in Resources */,
@@ -2609,11 +3033,14 @@
 				7695C8762216A09000ADD365 /* 重新定位@2x.png in Resources */,
 				76455588221E9A2B00F71DAA /* 语音3@3x.png in Resources */,
 				76393FB1221BF8A200F9E174 /* 语音发布@2x.png in Resources */,
+				76A2C4222239E89700E8E295 /* 我的-选中@2x.png in Resources */,
 				7620FAEF2216A7AE008A7488 /* 气球坐标@3x.png in Resources */,
 				76BF3BC82224CD0F0079C898 /* 发单打电话@3x.png in Resources */,
 				76393FCD221C009F00F9E174 /* 发单背景@3x.png in Resources */,
+				76A2C41A2239E88800E8E295 /* 消息-选中@2x.png in Resources */,
 				767E8D7D221F9AF0004611F5 /* 麦克风语音6@3x.png in Resources */,
 				7606861C2229027B0030EF50 /* defoult_header.png in Resources */,
+				76A2C4192239E88800E8E295 /* 消息-选中@3x.png in Resources */,
 				764EA8452216B21900113557 /* 跪求标题@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2737,6 +3164,7 @@
 				7681ED60223203CD0031FBBB /* MyRedPacketVC.m in Sources */,
 				760686362229027B0030EF50 /* JMVoiceBubbleContentView.m in Sources */,
 				7695C83D2216645000ADD365 /* GrabOrderVC.m in Sources */,
+				76DFAD5B2239F92300A9A395 /* MessageSystemView.m in Sources */,
 				760685FE2229027B0030EF50 /* IMUIRecordVoiceCell.swift in Sources */,
 				760685E82229027B0030EF50 /* IMUITextView.swift in Sources */,
 				76BF3BA322239D000079C898 /* OrderDetialContentView.m in Sources */,
@@ -2758,17 +3186,22 @@
 				7606863A222906A80030EF50 /* ConversationViewController.m in Sources */,
 				760685E32229027B0030EF50 /* IMUIVideoFileLoader.swift in Sources */,
 				764218F922277D5D0033E396 /* HttpNetworkManager+LBS.m in Sources */,
+				76DFAD85223B5A7600A9A395 /* OrderProgressingVC.m in Sources */,
 				7615596A221A816E00DFB406 /* BaseCollectionView.m in Sources */,
+				76DFAD612239F94600A9A395 /* BaseMessageCell.m in Sources */,
 				760685F72229027B0030EF50 /* IMUIGalleryDataManager.swift in Sources */,
 				76393FB9221BF8FD00F9E174 /* SendOrderBtn.m in Sources */,
+				76A2C4092239E58D00E8E295 /* MyGrabOrderVC.m in Sources */,
 				76736515222E054700F5AE0D /* PublishSuccessVC.m in Sources */,
 				76330C7D22378ACD00354C37 /* MIneHeadVIew.m in Sources */,
 				760685CB2229027B0030EF50 /* UIColorExtension.swift in Sources */,
 				76F715E22236459D00A4A62A /* TextFieldInputView.m in Sources */,
+				76DFAD6F223A49BA00A9A395 /* BaseMessageCell1.m in Sources */,
 				76155967221A815B00DFB406 /* BaseTableView.m in Sources */,
 				760685E52229027B0030EF50 /* IMUIMessageStatusView.swift in Sources */,
 				760686312229027B0030EF50 /* UserModel.m in Sources */,
 				760685D52229027B0030EF50 /* UIImageMessageListExtension.swift in Sources */,
+				76A2C3F42238E74100E8E295 /* ConversationTopView.m in Sources */,
 				76736539222E768000F5AE0D /* UserModelManager.m in Sources */,
 				7695C7672214FE0600ADD365 /* main.m in Sources */,
 				7695C82F2216540A00ADD365 /* BaseViewController.m in Sources */,
@@ -2822,6 +3255,7 @@
 				760685CE2229027B0030EF50 /* UIViewExtension.swift in Sources */,
 				769EFFAD221A49AA0032BA76 /* CustomAnnotationView.m in Sources */,
 				76BF3B92222382E90079C898 /* GrabDetialVC.m in Sources */,
+				76DFAD88223B987100A9A395 /* PayView.m in Sources */,
 				760686082229027B0030EF50 /* IMUIEmojiItemCell.swift in Sources */,
 				7645554C221D3A2D00F71DAA /* PublistWordsOrderVC.m in Sources */,
 				76455546221CEC1600F71DAA /* AlbumBottomView.m in Sources */,
@@ -2831,14 +3265,17 @@
 				76736507222CB37900F5AE0D /* AppDelegate+Bugly.m in Sources */,
 				760685CC2229027B0030EF50 /* CMSampleBufferExtension.swift in Sources */,
 				76455533221CE48B00F71DAA /* LYFPhotoManger.m in Sources */,
+				76DFAD5E2239F92F00A9A395 /* MessageUserVIew.m in Sources */,
 				7645558B221E9E0B00F71DAA /* VoiceRecorderManager.m in Sources */,
 				760686002229027B0030EF50 /* IMUIProgressButton.swift in Sources */,
 				760685DF2229027B0030EF50 /* IMUIMessageStatusViewProtocol.swift in Sources */,
 				764218FD2227B9F60033E396 /* LocationManager.m in Sources */,
 				76F715D9223605C600A4A62A /* Target_Comment.m in Sources */,
 				76A1419E221AABB900BCEDBF /* GrabOrderWaterFlowLayout.m in Sources */,
+				76DFAD552239F87900A9A395 /* MessageOrderView.m in Sources */,
 				760685DB2229027B0030EF50 /* IMUIMessageProtocol.swift in Sources */,
 				760685F12229027B0030EF50 /* IMUIInputViewDelegate.swift in Sources */,
+				76DFAD64223A2FE100A9A395 /* MessageBtn.m in Sources */,
 				760686302229027B0030EF50 /* MessageModel.m in Sources */,
 				7606853F222901910030EF50 /* JMessageTest.swift in Sources */,
 				760685E62229027B0030EF50 /* IMUIMessageCollectionView.swift in Sources */,
@@ -2854,6 +3291,7 @@
 				760685D82229027B0030EF50 /* IMUIViewCache.swift in Sources */,
 				76BF3BD02224CFF90079C898 /* UIButton+ImageTitleSpacing.m in Sources */,
 				7673650B222CF5A400F5AE0D /* DataPickView.m in Sources */,
+				76DFAD582239F91200A9A395 /* MessageTradView.m in Sources */,
 				760686012229027B0030EF50 /* IMUIFeatureView.swift in Sources */,
 				76455568221E374300F71DAA /* RedPackageCell1.m in Sources */,
 				760685DA2229027B0030EF50 /* IMUIMessageContentViewProtocol.swift in Sources */,
@@ -2876,8 +3314,10 @@
 				7606860C2229027B0030EF50 /* IMUIPhotoCaptureDelegate.swift in Sources */,
 				760685F92229027B0030EF50 /* IMUICameraCell.swift in Sources */,
 				760685E22229027B0030EF50 /* IMUIChatDataManager.swift in Sources */,
+				76A2C4142239E76600E8E295 /* MessageVC.m in Sources */,
 				760685F52229027B0030EF50 /* IMUIRecordVoiceHelper.swift in Sources */,
 				76BF3BA92223C04B0079C898 /* UIShareButton.m in Sources */,
+				76DFAD522239F0F500A9A395 /* BaseMessageView.m in Sources */,
 				761A5020222FDD6100D12B0F /* OpenRedPackageView.m in Sources */,
 				76BF3BA022238D0A0079C898 /* YUTimer.m in Sources */,
 				760685EF2229027B0030EF50 /* IMUIImageMessageContentView.swift in Sources */,
@@ -2889,9 +3329,11 @@
 				76330C80223793A700354C37 /* MIneCell.m in Sources */,
 				7645556B221E375900F71DAA /* RedPageageCell2.m in Sources */,
 				760685DE2229027B0030EF50 /* IMUIMessageCellProtocol.swift in Sources */,
+				76A2C3F1223895CD00E8E295 /* ConversationVC.m in Sources */,
 				76BF3B95222383250079C898 /* FoucuesView.m in Sources */,
 				7681ED6722321A8E0031FBBB /* HomeFilterView.m in Sources */,
 				760685D92229027B0030EF50 /* IMUIReuseViewCache.swift in Sources */,
+				76DFAD7A223B378C00A9A395 /* OrderInformation.m in Sources */,
 				76BF3BDF2224EEDF0079C898 /* UIImageView+LBBlurredImage.m in Sources */,
 				760685CD2229027B0030EF50 /* CIImageExtension.swift in Sources */,
 			);

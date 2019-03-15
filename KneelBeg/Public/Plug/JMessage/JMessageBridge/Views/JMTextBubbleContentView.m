@@ -34,10 +34,11 @@
   
   _textMessageLabel.frame = CGRectMake(0, 0, messageModel.layout.bubbleContentSize.width, messageModel.layout.bubbleContentSize.height);
   
+    _textMessageLabel.font = Font15();
   if (message.isOutGoing) {
-    _textMessageLabel.textColor = [[UIColor alloc] initWithNetHex: 0x7587A8];
-  } else {
     _textMessageLabel.textColor = [UIColor whiteColor];
+  } else {
+    _textMessageLabel.textColor = [[UIColor alloc] initWithNetHex: 0x373737];
   }
 }
 

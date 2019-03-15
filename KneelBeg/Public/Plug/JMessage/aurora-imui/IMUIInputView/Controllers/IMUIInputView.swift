@@ -49,11 +49,13 @@ open class IMUIInputView: UIView {
     super.init(frame: frame)
     let bundle = Bundle.imuiInputViewBundle()
     view = bundle.loadNibNamed("IMUIInputView", owner: self, options: nil)?.first as! UIView
+    view.backgroundColor = UIColor.red;
     
     self.addSubview(view)
     view.frame = self.bounds
     
     inputTextView.textContainer.lineBreakMode = .byWordWrapping
+//    inputTextView.textColor = UIColor.init(red: 55, green: 55, blue: 55, alpha: 1);
     inputTextView.delegate = self
     self.featureView.delegate = self
     print("fsad")
@@ -71,20 +73,30 @@ open class IMUIInputView: UIView {
     self.sendNumberLabel.layer.shadowOffset = CGSize(width: 2, height: 2)
     self.sendNumberLabel.layer.shadowRadius = 5
     self.sendNumberLabel.layer.shadowOpacity = 0.5
+    
+    print("fsad1")
+    
   }
   
   required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     let bundle = Bundle.imuiInputViewBundle()
     view = bundle.loadNibNamed("IMUIInputView", owner: self, options: nil)?.first as! UIView
+    view.backgroundColor = UIColor.white;
     
     self.addSubview(view)
     view.frame = self.bounds
     
     inputTextView.textContainer.lineBreakMode = .byWordWrapping
     inputTextView.delegate = self
+    inputTextView.textColor = UIColor.init(red: 55/55.0, green: 55/255.0, blue: 55/255.0, alpha: 1);
+    inputTextView.backgroundColor = UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1);
     self.featureView.delegate = self
+    self.featureView.backgroundColor = UIColor.white;
     self.featureSelectorView.delegate = self
+    
+    
+    print("fsad2")
   }
   
   func leaveGalleryMode() {

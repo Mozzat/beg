@@ -28,6 +28,7 @@ public class IMUIFeatureListIconCell: UICollectionViewCell {
   public func layout(with data: IMUIFeatureIconModel,onClickCallback: @escaping (IMUIFeatureListIconCell) -> ()) {
     self.featureData = data
     self.onClickCallback = onClickCallback
+    self.featureIconBtn.backgroundColor = UIColor.white
     self.featureIconBtn.setImage(data.defoultImage, for: .normal)
     self.featureIconBtn.setImage(data.selectedImage, for: .selected)
     

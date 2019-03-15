@@ -84,15 +84,61 @@ static NSString *RedPacketc_QueryDetail_API = @"/redPacket/queryDetail";
 ///抢红包
 static NSString *RedPacketc_Get_API = @"/redPacket/get";
 
+///根据订单编号查询普通订单详情
+static NSString *Order_QueryDetail_API = @"/order/queryDetail";
+
+///订单收藏
+static NSString *Order_Collect_API = @"/order/collect";
+
+///接收订单
+static NSString *Order_AcceptOrder_API = @"/order/acceptOrder";
+
+///接收订单
+static NSString *Order_CancelOrder_API = @"/order/cancelOrder";
+
+///订单确认完成
+static NSString *Order_ConfirmCompletion_API = @"/order/confirmCompletion";
+
+///发起收款
+static NSString *Order_InitiatedPayment_API = @"/order/initiatedPayment";
+
+///催单
+static NSString *Order_Reminder_API = @"/order/reminder";
+
 ///查看红包领取详情
 static NSString *RedPacketc_QueryGetDetail_API = @"/redPacket/queryGetDetail";
 
 ///我的红包
 static NSString *RedPacketc_MyRedPacketRecord_API = @"/redPacket/myRedPacketRecord";
 
+#pragma mark---抢单
+///抢单
+static NSString *VieOrder_VieOrder_API = @"/vieOrder/vieOrder";
+
 #pragma mark---上传文件
 static NSString *File_UploadFile_API = @"/File/uploadFile";
 
 static NSString *File_UploadFileBatch_API = @"/File/uploadFileBatch";
+
+#pragma mark----评论
+///添加评论
+static NSString *Comment_AddComment_API = @"/comment/addComment";
+///评论点赞
+static NSString *Comment_Like_API = @"/comment/like";
+///查询评论总数
+static NSString *Comment_SelectCountByTarget_API = @"/comment/selectCountByTarget";
+///查询评论
+static NSString *Comment_SelectByTargett_API = @"/comment/selectByTarget";
+///根据评论id查询评论
+static NSString *Comment_SelectById_API = @"/comment/selectById";
+
+
+#pragma mark---回复
+///新增回复
+static NSString *Reply_AddReply_API = @"/reply/addReply";
+///回复点赞
+static NSString *Reply_Like_API = @"/reply/like";
+///根据评论ID查询回复
+static NSString *Reply_SelectByCommentId_API = @"/reply/selectByCommentId";
 
 #endif /* APIName_h */

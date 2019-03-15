@@ -29,7 +29,8 @@
     
     [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.centerX.equalTo(self);
+        make.top.equalTo(self);
+        make.left.width.bottom.equalTo(self);
         
     }];
     

@@ -103,4 +103,18 @@
     return _openBtn;
 }
 
+- (void)setDataDic:(NSDictionary *)dataDic{
+    
+    _dataDic = dataDic;
+    NSString *content = dataDic[@"cDesc"];
+    self.titleLab.text = dataDic[@"cTitle"];
+    self.contentLab.text = content;
+    self.contentLab.lineBreakMode = NSLineBreakByTruncatingTail;
+    
+    CGSize rect = [content boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 40, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : Font15()} context:nil].size;
+    
+    self.openBtn.hidden = rect.height > 150 ? NO : YES ;
+    
+}
+
 @end

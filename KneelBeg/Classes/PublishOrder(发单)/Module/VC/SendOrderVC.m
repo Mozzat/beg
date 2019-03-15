@@ -149,9 +149,8 @@
     
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.height.mas_equalTo(245);
         make.left.width.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-BDTabBarHeight);
+        make.bottom.equalTo(self.view);
         
     }];
     

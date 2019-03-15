@@ -81,6 +81,35 @@
 
 
 /**
+ 订单收藏或者取消
+
+ @param orderNo 订单号
+ @param handle 1 收藏 0 取消
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)getCollectionActionWithOrderNo:(NSString *)orderNo WithHandle:(BOOL)handle WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+/**
+ 根据订单编号查询普通订单的信息
+
+ @param orderNo 订单编号
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)getCommentOrderDataWithOrderNo:(NSString *)orderNo WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 接单处理
+
+ @param orderNo 订单编号
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)acceptOrderWithOrderNo:(NSString *)orderNo WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+/**
  抢红包
 
  @param parameter 参数
@@ -126,5 +155,91 @@
  @param failBlock 失败回调
  */
 + (void)uploadOrderAudioWithArr:(NSString *)audioPath WithSort:(NSInteger)sort WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 查询评论列表
+
+ @param parameter 参数
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)getCommentListData:(NSMutableDictionary *)parameter WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 查询评论总数
+ 
+ @param parameter 参数
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)getCommentCount:(NSMutableDictionary *)parameter WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 评论点赞或者取消
+
+ @param commentId 评论id
+ @param handle 点赞或取消
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)commentLikeOrDislike:(NSString *)commentId WithHandle:(BOOL)handle WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 添加评论
+
+ @param orderNo 订单编号
+ @param message 消息
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)addCommentDataWithOrderNo:(NSString *)orderNo WithMessage:(NSString *)message WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 对评论进行回复
+
+ @param message 消息
+ @param type 类型 1对顶级评论进行回复 1 2.对回复的回复2
+ @param commentId 顶级n评论的id
+ @param replayId 回复id type = 1 replyid = 0
+ @param successBlock 成功回调h
+ @param failBlock 失败回调
+ */
++ (void)addReplyCommentDataWithMessage:(NSString *)message WithType:(NSInteger)type WithCommentId:(NSInteger)commentId WithReplayId:(NSInteger)replayId WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 回复点赞
+
+ @param replyId 回复id
+ @param handle  取消
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)replyCommentLikeOrDislike:(NSString *)replyId WithHandle:(BOOL)handle WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 根据评论id查询回复
+
+ @param commentId 评论id
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)selectByCommentId:(NSInteger)commentId WithPage:(NSInteger)page WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
+
+
+/**
+ 根据评论id查询评论本省
+
+ @param commentId 评论id
+ @param successBlock 成功回调
+ @param failBlock 失败回调
+ */
++ (void)selectByCommentId:(NSInteger)commentId WithSuccessBlock:(HttpRequestSuccessBlock)successBlock WithFailBlock:(HttpRequestFaileureBlock)failBlock;
 
 @end

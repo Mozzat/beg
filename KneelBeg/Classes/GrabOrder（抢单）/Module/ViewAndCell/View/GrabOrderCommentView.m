@@ -37,7 +37,6 @@
         make.top.equalTo(self);
         make.left.equalTo(self).offset(20);
         make.right.equalTo(self).offset(-20);
-        make.height.mas_equalTo(105);
         
     }];
     
@@ -45,7 +44,7 @@
     [self.headImage mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(self.topView.mas_bottom).offset(15);
-        make.left.equalTo(self).offset(30);
+        make.left.equalTo(self).offset(20);
         make.width.height.mas_equalTo(28);
         make.bottom.equalTo(self).offset(-10);
         
@@ -85,6 +84,7 @@
 
         make.top.equalTo(commentLab1.mas_bottom).offset(15);
         make.left.equalTo(self.topView).offset(15);
+        make.bottom.equalTo(self.topView).offset(-40);
 
     }];
 
@@ -97,10 +97,11 @@
 
     [lookAll mas_makeConstraints:^(MASConstraintMaker *make) {
 
-        make.top.equalTo(commentLab.mas_bottom).offset(15);
+        make.bottom.equalTo(self.topView).offset(-5);
         make.left.equalTo(self.topView).offset(15);
         make.width.mas_equalTo(82);
         make.height.mas_equalTo(18);
+        
 
     }];
     
@@ -146,6 +147,65 @@
     if (self.writeAction) {
         self.writeAction();
     }
+    
+}
+
+- (void)setData:(NSArray *)data{
+    
+    _data = data;
+    
+    for (UIView *view in self.topView.subviews) {
+        
+        if ([view isKindOfClass:[UILabel class]]) {
+            
+            [view removeFromSuperview];
+            
+        }
+        
+    }
+    
+    if (data.count) {
+        
+        self.topView.hidden = NO;
+        
+        UILabel *lastLab = nil;
+        for (NSInteger index = 0; index < data.count; index ++) {
+            
+            NSDictionary *dic = data[index];
+            
+            UILabel *commentLab = [[UILabel alloc]init];
+            commentLab.textColor = HexColor(@"191919");
+            commentLab.font = Font14();
+            commentLab.numberOfLines = 2;
+            commentLab.attributedText = [Util mutableStringWithTitle:[NSString stringWithFormat:@"%@：%@",dic[@"authorName"],dic[@"body"]] WithString1:[NSString stringWithFormat:@"%@：",dic[@"authorName"]] WithAttrDic1:@{NSFontAttributeName : BlodFont(14),NSForegroundColorAttributeName : blackColor()}];
+            [self.topView addSubview:commentLab];
+            
+            [commentLab mas_makeConstraints:^(MASConstraintMaker *make) {
+                
+                if (lastLab) {
+                    make.top.equalTo(lastLab.mas_bottom).offset(15);
+                } else {
+                    make.top.equalTo(self.topView).offset(15);
+                    
+                }
+                make.left.equalTo(self.topView).offset(15);
+                
+                if (index ==data.count - 1) {
+                    make.bottom.equalTo(self.topView).offset(-35);
+                }
+                
+            }];
+            
+            lastLab = commentLab;
+            
+        }
+        
+    } else {
+        
+        self.topView.hidden = YES;
+        
+    }
+    
     
 }
 

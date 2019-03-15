@@ -23,6 +23,8 @@
 #import "CommentListView.h"
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #import "OrderDetialWriteCommentView.h"
+#import "ConversationVC.h"
+#import "CTMediator+Comment.h"
 
 @interface GrabDetialVC ()
 
@@ -36,6 +38,12 @@
 @property (nonatomic, strong) CommentListView           *commentListView;
 @property (nonatomic, strong) OrderDetialWriteCommentView *writeCommentView;
 
+///属性
+@property (nonatomic, assign) NSInteger totalCount;
+@property (nonatomic, strong) NSDictionary *userInfo;
+@property (nonatomic, strong) NSArray      *linkArr;
+@property (nonatomic, strong) NSDictionary *order;
+
 @end
 
 @implementation GrabDetialVC
@@ -46,12 +54,13 @@
     
     [self setLocationUI];
     
+    [self getRequestAction];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
-    self.sliderScrollView.data = @[@"http://p1.img.cctvpic.com/cportal/img/2019/2/25/1551109029441_938_792x670.jpg",@"http://t11.baidu.com/it/u=538889017,157038003&fm=173&app=49&f=JPEG?w=640&h=725&s=A50042F9648B7AFCCC11C11F030090C2"];
+//    self.sliderScrollView.data = @[@"http://p1.img.cctvpic.com/cportal/img/2019/2/25/1551109029441_938_792x670.jpg",@"http://t11.baidu.com/it/u=538889017,157038003&fm=173&app=49&f=JPEG?w=640&h=725&s=A50042F9648B7AFCCC11C11F030090C2"];
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
 }
 
@@ -191,6 +200,15 @@
     
 }
 
+- (void)getRequestAction{
+    
+    ///数据查询
+    [self getOrderDetialData];
+    [self getCommentListData];
+    [self getCommentTotalCountRequest];
+    
+}
+
 #pragma mark---懒加载
 - (FoucuesView *)focuesView{
     
@@ -253,6 +271,7 @@
             
             LRStrongSelf(self);
             self.commentListView.hidden = NO;
+            self.commentListView.orderNo = self.orderNo;
             [self.commentListView startAnimation];
             
         };
@@ -267,6 +286,16 @@
         
         _commentListView = [[CommentListView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT)];
         
+        LRWeakSelf(self);
+        _commentListView.tapClick = ^(NSDictionary *dic) {
+          
+            LRStrongSelf(self);
+            [self.commentListView hideAnimation];
+            UIViewController *vc = [[CTMediator sharedInstance] commentVCMediatorWithParame:@{@"commitId":dic[@"id"]}];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        };
+        
     }
     return _commentListView;
 }
@@ -275,6 +304,13 @@
     
     if (!_writeCommentView) {
         _writeCommentView = [[OrderDetialWriteCommentView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT)];
+        
+        LRWeakSelf(self);
+        _writeCommentView.writeBlock = ^(NSString *message) {
+            LRStrongSelf(self);
+            [self writeCommentRequest:message];
+            
+        };
         
     }
     return _writeCommentView;
@@ -310,6 +346,7 @@
         [grabBtn setTitleColor:whiteColor() forState:UIControlStateNormal];
         grabBtn.backgroundColor = redColor();
         grabBtn.titleLabel.font = Font16();
+        [grabBtn addTarget:self action:@selector(grabOrderAction) forControlEvents:UIControlEventTouchUpInside];
         [_bottomView addSubview:grabBtn];
         
     }
@@ -356,6 +393,142 @@
         conversationVC.conversation = conversation;
         [self.navigationController pushViewController:conversationVC animated:YES];
     }
+}
+
+- (void)reloadUIData{
+    
+    NSInteger startTime = [self.order[@"dDate"] integerValue];
+    NSString *timeStr = [Util timeBeforeInfoWithString:startTime];
+    self.focuesView.addressStr = [NSString stringWithFormat:@"%@发布于%@",timeStr,self.order[@"cLocationIntro"]];
+    self.focuesView.dataDic = self.userInfo;
+    
+    self.sliderScrollView.data = self.linkArr;
+    self.basicInformtionView.dataDic = self.order;
+    self.shareView.nForward = [NSString stringWithFormat:@"%@",self.order[@"nForward"]];
+    self.shareView.nCollect = [NSString stringWithFormat:@"%@",self.order[@"nCollect"]];
+    self.contentView.dataDic = self.order;
+    
+}
+
+#pragma mark---网络请求
+///查询评论列表接口
+- (void)getCommentListData{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"value"] = self.orderNo;
+    parameter[@"pageNum"] = @"1";
+    
+    [HttpManagerRequest getCommentListData:parameter WithSuccessBlock:^(id result) {
+        
+        NSDictionary *dic = (NSDictionary *)result;
+        if ([[Util getJsonResultState:dic] isEqualToString:successKey]) {
+            
+            NSArray *data = [Util getJsonArray:dic];
+            self.commentView.data = data;
+            
+        }
+        
+    } WithFailBlock:^(id result) {
+        
+    }];
+    
+}
+
+///写评论
+- (void)writeCommentRequest:(NSString *)message{
+    
+    
+    if ([Util isBlankString:message]) {
+        
+        [JKRemindView showReminderString:@"评论不能为空"];
+        return;
+    }
+    
+    [self.writeCommentView hideAnimation];
+    
+    [HttpManagerRequest addCommentDataWithOrderNo:self.orderNo WithMessage:message WithSuccessBlock:^(id result) {
+       
+        NSDictionary *dic = (NSDictionary *)result;
+        if ([[Util getJsonResultState:dic] isEqualToString:successKey]) {
+         
+            [JKRemindView showReminderString:@"添加评论成功"];
+            
+        }
+        
+    } WithFailBlock:^(id result) {
+        
+    }];
+    
+}
+
+- (void)getCommentTotalCountRequest{
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"value"] = self.orderNo;
+    [HttpManagerRequest getCommentCount:parameter WithSuccessBlock:^(id result) {
+       
+        NSDictionary *dic = (NSDictionary *)result;
+        if ([[Util getJsonResultState:dic] isEqualToString:successKey]) {
+            
+            self.totalCount = [dic[@"data"] integerValue];
+            self.commentListView.totalCount = self.totalCount;
+            self.shareView.nMsgCount = @(self.totalCount).stringValue;
+            
+        }
+        
+    } WithFailBlock:^(id result) {
+        
+    }];
+    
+}
+
+///查询订单详情
+- (void)getOrderDetialData{
+    
+    [HttpManagerRequest getCommentOrderDataWithOrderNo:self.orderNo WithSuccessBlock:^(id result) {
+       
+        NSDictionary *dic = (NSDictionary *)result;
+        if ([[Util getJsonResultState:dic] isEqualToString:successKey]) {
+            
+            self.userInfo = dic[@"data"][@"userInfo"];
+            NSDictionary *orderMedia = dic[@"data"][@"orderMedia"];
+            self.order      = dic[@"data"][@"order"];
+            
+            NSMutableArray *imageArr = [NSMutableArray array];
+            for (NSDictionary *imageDic in orderMedia) {
+                NSString *image = imageDic[@"cPath"];
+                [imageArr addObject:image];
+            }
+            self.linkArr = [imageArr mutableCopy];
+            [self reloadUIData];
+            
+        }
+        
+    } WithFailBlock:^(id result) {
+        
+    }];
+}
+
+///抢单
+- (void)grabOrderAction{
+    
+    if (![UserModelManager userIsLogin]) {
+        
+        return;
+        
+    }
+    
+    [HttpManagerRequest acceptOrderWithOrderNo:self.orderNo WithSuccessBlock:^(id result) {
+       
+        NSDictionary *dic = (NSDictionary *)result;
+        if ([[Util getJsonResultState:dic] isEqualToString:successKey]) {
+            
+        }
+        
+    } WithFailBlock:^(id result) {
+        
+    }];
+    
 }
 
 @end

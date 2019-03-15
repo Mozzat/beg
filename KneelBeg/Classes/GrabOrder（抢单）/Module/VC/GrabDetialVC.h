@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GrabDetialVC : BaseViewController
 
+@property (nonatomic, copy) NSString *orderNo;
+
 @end
 
 NS_ASSUME_NONNULL_END

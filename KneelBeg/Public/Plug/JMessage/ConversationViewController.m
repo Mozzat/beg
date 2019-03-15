@@ -14,12 +14,17 @@
 #import "MessageModel.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <IQKeyboardManager/IQKeyboardManager.h>
+#import "ConversationTopView.h"
 
 @interface ConversationViewController() <IMUIInputViewDelegate, IMUIMessageMessageCollectionViewDelegate, JMessageDelegate>
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *listTopConstraint;
 @property (weak, nonatomic) IBOutlet IMUIMessageCollectionView *messageList;
 @property (weak, nonatomic) IBOutlet IMUIInputView *imuiInputView;
 @property (strong, nonatomic) AVPlayer *player;
 @property (strong, nonatomic) AVPlayerLayer *playLayer;
+@property (strong, nonatomic) ConversationTopView *topView;
+
 @end
 
 @implementation ConversationViewController
@@ -27,8 +32,10 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
     
-
-    self.navigationItem.title = self.conversation.title;
+  [self setLocationUI];
+    
+  self.navigationItem.title = self.conversation.title;
+  self.listTopConstraint.constant = BDTopHeight + 90;
     
   _messageList.delegate = self;
   _imuiInputView.inputViewDelegate = self;
@@ -42,6 +49,22 @@
   }
   [JMessage addDelegate:self withConversation:_conversation];
   [_messageList insertMessagesWith:messageModelArray];
+
+}
+
+- (void)setLocationUI{
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [btn setImage:[UIImage imageNamed:@"发单更多"] forState:UIControlStateNormal];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [btn1 setImage:[UIImage imageNamed:@"打电话黑"] forState:UIControlStateNormal];
+    UIBarButtonItem *item2 = [[UIBarButtonItem alloc]initWithCustomView:btn1];
+    
+    self.navigationItem.rightBarButtonItems = @[item1,item2];
+    
+    [self.view addSubview:self.topView];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -68,6 +91,14 @@
     
 }
 
+#pragma mark---懒加载
+- (ConversationTopView *)topView{
+    
+    if (!_topView) {
+        _topView = [[ConversationTopView alloc]initWithFrame:CGRectMake(0, BDTopHeight, SCREEN_WIDTH, 90)];
+    }
+    return _topView;
+}
 
 // - MARK: IMUIInputViewDelegate
 - (void)messageCollectionView:(UICollectionView * _Nonnull)willBeginDragging {

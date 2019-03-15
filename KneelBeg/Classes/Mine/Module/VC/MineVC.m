@@ -10,6 +10,7 @@
 #import "Login.h"
 #import "MIneCell.h"
 #import "MIneHeadVIew.h"
+#import "OrderProgressingVC.h"
 
 @interface MineVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -101,6 +102,14 @@ static NSString *cellId = @"MineVC";
     }
     
     return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    OrderProgressingVC *progress = [[OrderProgressingVC alloc]init];
+    progress.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:progress animated:YES];
     
 }
 

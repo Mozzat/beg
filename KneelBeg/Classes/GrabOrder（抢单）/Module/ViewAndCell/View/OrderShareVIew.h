@@ -16,6 +16,10 @@ typedef void(^OrderShareViewCommentBlock)(void);
 
 @property (nonatomic, copy) OrderShareViewCommentBlock commentBlock;
 
+@property (nonatomic, copy) NSString *nForward;
+@property (nonatomic, copy) NSString *nCollect;
+@property (nonatomic, copy) NSString *nMsgCount;
+
 @end
 
 NS_ASSUME_NONNULL_END

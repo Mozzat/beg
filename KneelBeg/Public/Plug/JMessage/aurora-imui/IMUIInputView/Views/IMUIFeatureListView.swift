@@ -39,6 +39,7 @@ class IMUIFeatureListView: UIView {
     
     let bundle = Bundle.imuiBundle()
     view = bundle.loadNibNamed("IMUIFeatureListView", owner: self, options: nil)?.first as! UIView
+    view.backgroundColor = UIColor.white;
     
     self.addSubview(view)
     view.frame = self.bounds
@@ -78,6 +79,7 @@ class IMUIFeatureListView: UIView {
     self.featureListCollectionView.register(UINib(nibName: "IMUIFeatureListIconCell", bundle: bundle), forCellWithReuseIdentifier: "IMUIFeatureListIconCell")
     self.featureListCollectionView.delegate = self
     self.featureListCollectionView.dataSource = self
+    self.featureListCollectionView.backgroundColor = UIColor.white
     
     self.layoutFeatureListToCenter()
   }

@@ -119,4 +119,25 @@
     }
 }
 
+- (void)setNForward:(NSString *)nForward{
+    
+    _nForward = nForward;
+    self.shareBtn.titleS = nForward;
+    
+}
+
+- (void)setNCollect:(NSString *)nCollect{
+    
+    _nCollect = nCollect;
+    self.collectionBtn.titleS = nCollect;
+    
+}
+
+- (void)setNMsgCount:(NSString *)nMsgCount{
+    
+    _nMsgCount = nMsgCount;
+    self.messageBtn.titleS = nMsgCount;
+    
+}
+
 @end

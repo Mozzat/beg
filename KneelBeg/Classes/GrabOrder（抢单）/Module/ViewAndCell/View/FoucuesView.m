@@ -7,6 +7,7 @@
 //
 
 #import "FoucuesView.h"
+#import "UIImageView+Load.h"
 
 @interface FoucuesView ()
 
@@ -65,13 +66,6 @@
         
     }];
     
-    [self.contentLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.top.equalTo(self.titleLab.mas_bottom).offset(10);
-        make.left.equalTo(self.titleLab);
-        
-    }];
-    
     [self.focuesBtn rounded:15 width:1 color:redColor()];
     [self.focuesBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -82,6 +76,14 @@
         
     }];
     
+    [self.contentLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(self.titleLab.mas_bottom).offset(5);
+        make.left.equalTo(self.titleLab);
+        make.right.mas_lessThanOrEqualTo(self.focuesBtn.mas_left).offset(-10);
+        
+    }];
+    
 }
 
 #pragma mark---懒加载
@@ -89,7 +91,6 @@
     
     if (!_headImageV) {
         _headImageV = [[UIImageView alloc]init];
-        _headImageV.backgroundColor = redColor();
         
     }
     return _headImageV;
@@ -126,6 +127,7 @@
         _contentLab.textColor = HexColor(@"9b9b9b");
         _contentLab.text = @"10分钟前发布于上海 黄浦区";
         _contentLab.font = Font12();
+        _contentLab.numberOfLines = 2;
         
     }
     return _contentLab;
@@ -142,6 +144,16 @@
     }
     
     return _focuesBtn;
+    
+}
+
+- (void)setDataDic:(NSDictionary *)dataDic{
+    
+    _dataDic = dataDic;
+    [self.headImageV loadImageViewWithImageString:dataDic[@"cHeadImage"] WithPlaceHoldeImage:@"默认头像"];
+    self.titleLab.text = dataDic[@"cName"];
+    self.contentLab.text = self.addressStr;
+    
     
 }
 

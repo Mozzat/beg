@@ -14,6 +14,7 @@ typedef void(^GrabOrderWriteAction)(void);
 
 @interface GrabOrderCommentView : UIView
 
+@property (nonatomic, strong) NSArray            *data;
 @property (nonatomic, copy) GrabOrderWriteAction writeAction;
 
 @end

@@ -32,7 +32,7 @@ import UIKit
   @objc public static var statusViewSize: CGSize = CGSize(width: 30, height: 30)
   @objc public static var statusViewOffsetToBubble: UIOffset = UIOffset(horizontal: 12, vertical: 0)
   
-  @objc public static var bubbleMaxWidth: CGFloat = 170.0
+  @objc public static var bubbleMaxWidth: CGFloat = 250
   @objc public static var isNeedShowInComingName = false
   @objc public static var isNeedShowOutGoingName = false
   
